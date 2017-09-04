@@ -1,10 +1,10 @@
 angular
   .module('project4')
-  .controller('LessonsShowCtrl', LessonsShowCtrl);
+  .controller('TeachersShowCtrl', TeachersShowCtrl);
 
-LessonsShowCtrl.$inject = ['Lesson', '$stateParams'];
-function LessonsShowCtrl(Lesson, $stateParams) {
+TeachersShowCtrl.$inject = ['Teacher', '$stateParams'];
+function TeachersShowCtrl(Teacher, $stateParams) {
   const vm = this;
 
-  vm.lesson = Lesson.get({ id: $stateParams.id });
+  vm.teacher = Teacher.get({ id: $stateParams.id });
 }

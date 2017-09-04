@@ -3,5 +3,8 @@
 <ul>
   <li ng-repeat="lesson in controller.lessons">
     <h2 ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name }}</h2>
+    <p> Time: {{ lesson.time | date: "h:mma" }}</p>
+    <p> Date: {{ lesson.date}}</p>
+    <p> Teacher: {{ lesson.teacher.name }}</p>
   </li>
 </ul>

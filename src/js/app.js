@@ -3,4 +3,5 @@ angular
     'ui.router',
     'ngResource',
     'angular-jwt'
+    // 'ui.filter'
   ]);

@@ -1,1 +1,14 @@
 <h1>{{controller.teacher.name}}</h1>
+
+<p>{{controller.teacher.description}}</p>
+<img src="{{controller.teacher.image}}" width="200">
+
+<li ng-repeat="genre in controller.teacher.genres">
+  <p>{{genre.name}}</p>
+  <div><img src="{{genre.image}}" width="300"></div>
+</li>
+
+<li ng-repeat="location in controller.teacher.locations">
+  <p>{{location.name}}</p>
+  <p>{{location.address}}</p>
+</li>
