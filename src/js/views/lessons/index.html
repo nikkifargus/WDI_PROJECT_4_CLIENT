@@ -1,0 +1,7 @@
+<h1>lessons index</h1>
+
+<ul>
+  <li ng-repeat="lesson in controller.lessons">
+    <h2 ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name }}</h2>
+  </li>
+</ul>
