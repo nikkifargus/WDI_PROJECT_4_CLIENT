@@ -11,14 +11,14 @@ function LessonsEditCtrl(Lesson, $stateParams, $state) {
 
   function lessonsUpdate() {
     Lesson
-    .update(vm.lesson)
+    .update({id: vm.lesson.id}, {lesson: vm.lesson})
     .$promise
     .then(() => $state.go('lessonsShow', $stateParams));
   }
 
   function lessonsDelete() {
     Lesson
-    .remove({ id: vm.lesson._id })
+    .remove({ id: vm.lesson.id })
     .$promise
     .then(() => {
       $state.go('lessonsIndex');

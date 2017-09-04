@@ -1,0 +1,7 @@
+<h1>Locations Index</h1>
+
+<ul>
+  <li ng-repeat="location in controller.locations">
+    <h2 ui-sref="locationsShow({ id: location.id })">{{ location.name }}</h2>
+  </li>
+</ul>

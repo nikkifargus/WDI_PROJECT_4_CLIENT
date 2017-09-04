@@ -11,14 +11,15 @@ function LocationsEditCtrl(Location, $stateParams, $state) {
 
   function locationsUpdate() {
     Location
-    .update(vm.location)
+    .update({id: vm.location.id}, {location: vm.location})
+
     .$promise
     .then(() => $state.go('locationsShow', $stateParams));
   }
 
   function locationsDelete() {
     Location
-    .remove({ id: vm.location._id })
+    .remove({ id: vm.location.id })
     .$promise
     .then(() => {
       $state.go('locationsIndex');

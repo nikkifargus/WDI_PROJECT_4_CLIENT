@@ -1,0 +1,19 @@
+<h1>Create New Location</h1>
+
+<form ng-submit="controller.NewLocation()">
+
+  <div class="form-group">
+    <input class="form-control" type="text" name="admin" ng-model="controller.location.name" placeholder="Name of Location">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="address" ng-model="controller.location.address" placeholder="Address">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="float" name="lat" ng-model="controller.location.lat" placeholder="latitude">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="float" name="long" ng-model="controller.location.long" placeholder="longitude">
+  </div>
+
+  <input class="btn btn-primary" type="submit" value="Submit" />
+</form>

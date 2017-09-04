@@ -11,14 +11,14 @@ function PostsEditCtrl(Post, $stateParams, $state) {
 
   function postsUpdate() {
     Post
-    .update(vm.post)
+    .update({id: vm.post.id}, {post: vm.post})
     .$promise
     .then(() => $state.go('postsShow', $stateParams));
   }
 
   function postsDelete() {
     Post
-    .remove({ id: vm.post._id })
+    .remove({ id: vm.post.id })
     .$promise
     .then(() => {
       $state.go('postsIndex');

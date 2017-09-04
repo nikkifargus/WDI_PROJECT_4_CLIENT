@@ -1,0 +1,29 @@
+<h1>Edit {{controller.user.firstname}} {{controller.user.lastname}} Profile</h1>
+
+<form ng-submit="controller.update()">
+  <div class="form-group">
+    <input class="form-control" type="text" name="firstname" ng-model="controller.user.firstname" placeholder="First name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="lastname" ng-model="controller.user.lastname" placeholder="Last name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="email" name="email" ng-model="controller.user.email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="description" ng-model="controller.user.description" placeholder="Tell us a bit about yourself">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="image" ng-model="controller.user.image" placeholder="Image">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" name="password" ng-model="controller.user.password" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" name="password_confirmation" ng-model="controller.user.password_confirmation" placeholder="Password confirmation">
+  </div>
+
+  <button class="btn btn-primary" ui-sref="usersShow({ id: controller.user.id })">Cancel</button>
+
+  <button class="btn btn-primary" type="submit">Save</button>
+</form>
