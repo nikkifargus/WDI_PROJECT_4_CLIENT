@@ -1,6 +1,6 @@
 <h1>{{controller.location.name}}</h1>
 
-<a ui-sref="locationsEdit({ id: controller.location.id })">Edit</a>
+<a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">Edit</a>
 <button type="button" name="button"><a ui-sref="locationsIndex">Back</a></button>
 
 <p>Address: {{controller.location.address}}</p>

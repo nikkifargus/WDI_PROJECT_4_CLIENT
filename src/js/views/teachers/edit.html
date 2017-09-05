@@ -1,6 +1,6 @@
 <h1>{{controller.teacher.name}} Edit</h1>
 
-<form ng-submit="controller.update()">
+<form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
   <div class="form-group">
     <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">

@@ -1,6 +1,6 @@
 <h1>Create New Teacher</h1>
 
-<form ng-submit="controller.NewTeacher()">
+<form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewTeacher()">
 
   <div class="form-group">
     <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">

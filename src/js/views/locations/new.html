@@ -1,6 +1,6 @@
 <h1>Create New Location</h1>
 
-<form ng-submit="controller.NewLocation()">
+<form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewLocation()">
 
   <div class="form-group">
     <input class="form-control" type="text" name="admin" ng-model="controller.location.name" placeholder="Name of Location">

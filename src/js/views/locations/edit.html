@@ -1,6 +1,6 @@
 <h1> Edit {{controller.location.name}} </h1>
 
-<form ng-submit="controller.update()">
+<form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
   <div class="form-group">
     <input class="form-control" type="text" name="admin" ng-model="controller.location.name" placeholder="Name of Location">

@@ -1,6 +1,6 @@
 <h1>{{controller.lesson.genre.name}} Edit</h1>
 
-<form ng-submit="controller.update()">
+<form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
   <div class="form-group">
     <label for="genres"> Please select a Lesson Type</label>
     <select name="genres" ng-model="controller.lesson.genre_id"  ng-options="option.id as option.name for option in controller.genres">

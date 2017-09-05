@@ -6,3 +6,11 @@
 
 <button type="button" name="button"><a ui-sref="usersEdit({ id: controller.user.id })">Edit</a></button>
 <button type="button" name="button"><a ui-sref="home">Back</a></button>
+
+<h1>My classes</h1>
+<ul>
+  <li ng-repeat="lesson in controller.user.lessons">
+    <p ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name }}</p>
+    <img src="{{lesson.genre.image}}" width="100">
+  </li>
+</ul>

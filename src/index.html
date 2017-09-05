@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Project 4 Client</title>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script> -->
-  <base href="/" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgBXW8fuYJWVq9S5Gyebd9xYXFheCdTgc"
+    type="text/javascript"></script>
+    <base href="/" />
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -37,13 +38,13 @@
             <li ng-show="main.user">
               <a ui-sref="lessonsIndex">Lesson Schedule</a>
             </li>
-            <li ng-show="main.user">
+            <li ng-show="main.user.admin === 'admin'">
               <a ui-sref="teachersIndex">All Teachers</a>
             </li>
-            <li ng-show="main.user">
+            <li ng-show="main.user.admin === 'admin'">
               <a ui-sref="genresIndex">All Genres</a>
             </li>
-            <li ng-show="main.user">
+            <li ng-show="main.user.admin === 'admin'">
               <a ui-sref="locationsIndex">All Locations</a>
             </li>
             <li>
