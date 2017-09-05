@@ -1,1 +1,17 @@
 <h1>Create Genre</h1>
+
+<form ng-submit="controller.NewGenre()">
+
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" ng-model="controller.genre.name" placeholder="Name of Genre">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="description" ng-model="controller.genre.description" placeholder="Description">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="image" ng-model="controller.genre.image" placeholder="image">
+  </div>
+  <button class="btn btn-primary" ui-sref="genresIndex">Cancel</button>
+
+  <input class="btn btn-primary" type="submit" value="Submit" />
+</form>

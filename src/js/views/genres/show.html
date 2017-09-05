@@ -1,5 +1,8 @@
 <h1>{{controller.genre.name}}</h1>
 
+<a ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
+<button type="button" name="button"><a ui-sref="genresIndex">Back</a></button>
+
 <img src="{{controller.genre.image}}" width="600">
 
 <h4>Description</h4>

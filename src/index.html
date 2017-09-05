@@ -37,6 +37,15 @@
             <li ng-show="main.user">
               <a ui-sref="lessonsIndex">Lesson Schedule</a>
             </li>
+            <li ng-show="main.user">
+              <a ui-sref="teachersIndex">All Teachers</a>
+            </li>
+            <li ng-show="main.user">
+              <a ui-sref="genresIndex">All Genres</a>
+            </li>
+            <li ng-show="main.user">
+              <a ui-sref="locationsIndex">All Locations</a>
+            </li>
             <li>
               <p class="navbar-text"><a ui-sref="usersShow({ id: main.user.id })"> {{main.user.firstname}}</a></p>
             </li>

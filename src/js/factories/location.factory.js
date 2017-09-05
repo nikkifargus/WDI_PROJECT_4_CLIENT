@@ -4,5 +4,7 @@ angular
 
 locationFactory.$inject = ['API', '$resource'];
 function locationFactory(API, $resource){
-  return $resource(`${API}/locations/:id`, { id: '@_id'});
+  return $resource(`${API}/locations/:id`, { id: '@_id'}, {
+    'update': { method: 'PUT' }
+  });
 }

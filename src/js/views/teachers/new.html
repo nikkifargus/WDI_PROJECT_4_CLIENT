@@ -1,1 +1,17 @@
 <h1>Create New Teacher</h1>
+
+<form ng-submit="controller.NewTeacher()">
+
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="description" ng-model="controller.teacher.description" placeholder="Description">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
+  </div>
+
+  <button class="btn btn-primary" ui-sref="teachersIndex">Cancel</button>
+  <input class="btn btn-primary" type="submit" value="Submit" />
+</form>

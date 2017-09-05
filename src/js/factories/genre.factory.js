@@ -4,5 +4,7 @@ angular
 
 genreFactory.$inject = ['API', '$resource'];
 function genreFactory(API, $resource){
-  return $resource(`${API}/genres/:id`, { id: '@_id'});
+  return $resource(`${API}/genres/:id`, { id: '@_id'}, {
+    'update': { method: 'PUT' }
+  });
 }

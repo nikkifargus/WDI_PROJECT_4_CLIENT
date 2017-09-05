@@ -4,5 +4,7 @@ angular
 
 postFactory.$inject = ['API', '$resource'];
 function postFactory(API, $resource){
-  return $resource(`${API}/posts/:id`, { id: '@_id'});
+  return $resource(`${API}/posts/:id`, { id: '@_id'}, {
+    'update': { method: 'PUT' }
+  });
 }

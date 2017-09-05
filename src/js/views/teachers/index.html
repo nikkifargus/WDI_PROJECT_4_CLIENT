@@ -3,5 +3,9 @@
 <ul>
   <li ng-repeat="teacher in controller.teachers">
     <h2 ui-sref="teachersShow({ id: teacher.id })">{{ teacher.name }}</h2>
+    <img src="{{teacher.image}}" width="100">
   </li>
 </ul>
+
+<button class="btn btn-primary" ui-sref="home">Back</button>
+<button class="btn btn-primary" ui-sref="teachersNew">Add New Teacher</button>

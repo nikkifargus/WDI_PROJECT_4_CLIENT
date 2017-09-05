@@ -3,5 +3,9 @@
 <ul>
   <li ng-repeat="genre in controller.genres">
     <h2 ui-sref="genresShow({ id: genre.id })">{{ genre.name }}</h2>
+    <img src="{{genre.image}}" width="200">
   </li>
 </ul>
+
+<button class="btn btn-primary" ui-sref="home">Back</button>
+<button class="btn btn-primary" ui-sref="genresNew">Add New Genre</button>

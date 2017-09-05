@@ -18,7 +18,7 @@ function TeachersEditCtrl(Teacher, $stateParams, $state) {
 
   function teachersDelete() {
     Teacher
-    .remove({ id: vm.teacher._id })
+    .remove({ id: vm.teacher.id })
     .$promise
     .then(() => {
       $state.go('teachersIndex');

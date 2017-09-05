@@ -2,10 +2,13 @@ angular
 .module('project4')
 .controller('LessonsEditCtrl', LessonsEditCtrl);
 
-LessonsEditCtrl.$inject = ['Lesson', '$stateParams', '$state'];
-function LessonsEditCtrl(Lesson, $stateParams, $state) {
+LessonsEditCtrl.$inject = ['Lesson', 'Genre', 'Teacher', 'Location','$stateParams', '$state'];
+function LessonsEditCtrl(Lesson, Genre, Teacher, Location, $stateParams, $state) {
   const vm = this;
   vm.lesson = Lesson.get($stateParams);
+  vm.teachers     = Teacher.query();
+  vm.genres      = Genre.query();
+  vm.locations    = Location.query();
   vm.update = lessonsUpdate;
   vm.delete = lessonsDelete;
 

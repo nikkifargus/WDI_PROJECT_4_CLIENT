@@ -1,5 +1,8 @@
 <h1>{{controller.teacher.name}}</h1>
 
+<a ui-sref="teachersEdit({ id: controller.teacher.id })">Edit</a>
+<button type="button" name="button"><a ui-sref="teachersIndex">Back</a></button>
+
 <p>{{controller.teacher.description}}</p>
 <img src="{{controller.teacher.image}}" width="200">
 
@@ -8,7 +11,7 @@
   <div><img src="{{genre.image}}" width="300"></div>
 </li>
 
-<li ng-repeat="location in controller.teacher.locations">
+<li ng-repeat="location in controller.locations">
   <p>{{location.name}}</p>
   <p>{{location.address}}</p>
 </li>

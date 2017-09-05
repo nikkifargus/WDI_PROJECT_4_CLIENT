@@ -1,11 +1,14 @@
 <h1>{{controller.lesson.genre.name}}</h1>
 
+<a ui-sref="lessonsEdit({ id: controller.lesson.id })">Edit</a>
+<button type="button" name="button"><a ui-sref="lessonsIndex">Back</a></button>
+
 <img src="{{controller.lesson.genre.image}}" width="600">
 
 <h4>Description</h4>
 <p>{{controller.lesson.genre.description}}</p>
-<p> Time: {{ lesson.time | date: "h:mma" }}</p>
-<p> Date: {{ lesson.date}}</p>
+<p> Time: {{ controller.lesson.time | date: "h:mma" }}</p>
+<p> Date: {{ controller.lesson.date}}</p>
 
 <h4>The Instructor</h4>
 <img src="{{controller.lesson.teacher.image}}" width="100">
@@ -20,5 +23,4 @@
 <li ng-repeat="user in controller.lesson.users">
   <img src="{{user.image}}" width="40">
 </li>
-
 </ul>
