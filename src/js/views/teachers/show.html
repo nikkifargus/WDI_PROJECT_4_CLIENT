@@ -1,19 +1,45 @@
-<section>
-  <h1>{{controller.teacher.name | uppercase}}</h1>
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>{{controller.teacher.name | uppercase}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">EDIT</a>
   <button type="button" name="button"><a ui-sref="teachersIndex">BACK</a></button>
   <p>{{controller.teacher.description | uppercase}}</p>
   <img src="{{controller.teacher.image}}" width="200">
-</section>
-<section>
-  <h1>CLASSES</h1>
+
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>CLASSES</h2>
+        </div>
+      </div>
+    </div>
+  </div>
   <li ng-repeat="genre in controller.teacher.genres">
     <p>{{genre.name| uppercase}}</p>
     <div><img src="{{genre.image}}" width="300"></div>
   </li>
-</section>
-<section>
-  <h1>LOCATIONS</h1>
+
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>LOCATIONS</h2>
+        </div>
+      </div>
+    </div>
+  </div>
   <li ng-repeat="location in controller.locations">
     <p>{{location.name| uppercase}}</p>
     <p>{{location.address| uppercase}}</p>

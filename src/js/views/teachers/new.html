@@ -1,17 +1,32 @@
-<h1>CREATE NEW TEACHER</h1>
-
-<form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewTeacher()">
-
-  <div class="form-group">
-    <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>CREATE NEW TEACHER</h2>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="description" ng-model="controller.teacher.description" placeholder="Description">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
-  </div>
+  <section class= "formContainer">
+    <form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewTeacher()">
 
-  <button class="btn btn-primary" ui-sref="teachersIndex">Cancel</button>
-  <input class="btn btn-primary" type="submit" value="Submit" />
-</form>
+      <div class="form-group">
+        <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="description" ng-model="controller.teacher.description" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
+      </div>
+      
+      <div class="buttonGroup">
+        <button class="btn btn-primary" ui-sref="teachersIndex">Cancel</button>
+        <input class="btn btn-primary" type="submit" value="Submit" />
+      </div>
+
+    </form>
+  </section>
+</section>

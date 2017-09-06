@@ -3,35 +3,41 @@
     <div class="col-xs-12 divTitle">
       <hr>
       <div class="text">
-        <h1>EDIT MY PROFILE</h1>
+        <h2>EDIT MY PROFILE</h2>
       </div>
     </div>
   </div>
+</div>
 
-<form ng-submit="controller.update()">
-  <div class="form-group">
-    <input class="form-control" type="text" name="firstname" ng-model="controller.user.firstname" placeholder="First name">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="lastname" ng-model="controller.user.lastname" placeholder="Last name">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="email" name="email" ng-model="controller.user.email" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="description" ng-model="controller.user.description" placeholder="Tell us a bit about yourself">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="image" ng-model="controller.user.image" placeholder="Image">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="password" name="password" ng-model="controller.user.password" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="password" name="password_confirmation" ng-model="controller.user.password_confirmation" placeholder="Password confirmation">
-  </div>
+<section class= "formContainer">
 
-  <button class="btn btn-primary" ui-sref="usersShow({ id: controller.user.id })">CANCEL</button>
+  <form ng-submit="controller.update()">
+    <div class="form-group">
+      <input class="form-control" type="text" name="firstname" ng-model="controller.user.firstname" placeholder="First name">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" name="lastname" ng-model="controller.user.lastname" placeholder="Last name">
+    </div>
+    <div class="form-group form">
+      <input class="form-control" type="email" name="email" ng-model="controller.user.email" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" name="description" ng-model="controller.user.description" placeholder="Tell us a bit about yourself">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" name="image" ng-model="controller.user.image" placeholder="Image">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="password" name="password" ng-model="controller.user.password" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="password" name="password_confirmation" ng-model="controller.user.password_confirmation" placeholder="Password confirmation">
+    </div>
 
-  <button class="btn btn-primary" type="submit">SAVE</button>
-</form>
+    <div class="buttonGroup">
+      <button class="btn btn-primary" ui-sref="usersShow({ id: controller.user.id })">CANCEL</button>
+      <button class="btn btn-primary" type="submit">SAVE</button>
+    </div>
+
+  </form>
+</section>
