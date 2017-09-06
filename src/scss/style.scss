@@ -4,6 +4,11 @@
 @import 'divider';
 @import 'form';
 @import 'button';
+@import 'footer';
+
+$lightGreen: #d3edeb;
+$darkGreen: #6dc2bc;
+$lightGrey: #575757;
 
 h1{
   font-size: 12vw;
@@ -31,7 +36,7 @@ p{
 
 main {
   font-family: 'Quicksand', sans-serif;
-  margin-top: 6%;
+  // margin-top: 6%;
 }
 
 ul{

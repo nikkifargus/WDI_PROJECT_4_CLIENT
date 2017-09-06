@@ -10,6 +10,7 @@ function MainCtrl(CurrentUserService, $rootScope, $state, Teacher, Genre, Locati
     vm.user = CurrentUserService.currentUser;
     vm.teacher = Teacher.query();
     vm.genre = Genre.query();
+    vm.location = Location.query();
 
     vm.logout = () => {
       CurrentUserService.removeUser();

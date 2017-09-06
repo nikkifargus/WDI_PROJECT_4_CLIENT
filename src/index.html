@@ -58,7 +58,13 @@
   <main ui-view>
 
   </main>
-  <footer>
-  </footer>
+
 </body>
+<footer>
+  <ul class= "row">
+    <li class= "col-xs-4" ng-repeat="location in main.location">
+      <p ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</p>
+    </li>
+  </ul>
+</footer>
 </html>
