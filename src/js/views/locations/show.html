@@ -1,7 +1,20 @@
-<h1>{{controller.location.name | uppercase}}</h1>
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>{{controller.location.name | uppercase}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">EDIT</a>
 <button type="button" name="button"><a ui-sref="locationsIndex">BACK</a></button>
 
 <p>ADDRESS: {{controller.location.address | uppercase}}</p>
+
 <google-map center="{ lat: controller.location.lat, lng: controller.location.long }"></google-map>
+</section>

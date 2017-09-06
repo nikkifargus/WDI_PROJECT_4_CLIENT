@@ -1,20 +1,34 @@
-<h1>EDIT TEACHER</h1>
-
-<form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
-
-  <div class="form-group">
-    <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="description" ng-model="controller.teacher.description" placeholder="Description">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>EDIT TEACHER</h2>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <button class="btn btn-primary" ui-sref="teachersShow({ id: controller.teacher.id })">CANCEL</button>
+  <section class= "formContainer">
+    <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
-  <input class="btn btn-primary" type="submit" value="Submit" />
-</form>
-
-<button ng-show="main.user.admin === 'admin'"  class="btn btn-primary" ng-click="controller.delete()" name="button">DELETE TEACHER</button>
+      <div class="form-group">
+        <input class="form-control" type="text" name="name" ng-model="controller.teacher.name" placeholder="Name of Teacher">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="description" ng-model="controller.teacher.description" placeholder="Description">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
+      </div>
+      <div class="buttonGroup">
+        <button class="btn btn-primary" ui-sref="teachersShow({ id: controller.teacher.id })">CANCEL</button>
+        <button class="btn btn-primary" type="submit">SAVE</button>
+      </div>
+    </form>
+    <div class="buttonGroup">
+      <button ng-show="main.user.admin === 'admin'"  class="btn btn-primary" ng-click="controller.delete()" name="button">DELETE TEACHER</button>
+    </div>
+  </section>
+</section>

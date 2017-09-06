@@ -1,11 +1,23 @@
-<h1>CURRENT TEACHERS</h1>
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>CURRENT TEACHERS</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="teachersNew">ADD NEW TEACHER</button>
 
 <ul>
   <li ng-repeat="teacher in controller.teachers">
-    <h2 ui-sref="teachersShow({ id: teacher.id })">{{ teacher.name | uppercase }}</h2>
     <img src="{{teacher.image}}" width="100">
+    <h3 ui-sref="teachersShow({ id: teacher.id })">{{ teacher.name | uppercase }}</h3>
     <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">EDIT</a>
   </li>
 </ul>
+
+</section>
