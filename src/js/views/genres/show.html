@@ -1,23 +1,31 @@
-<h1>{{controller.genre.name}}</h1>
+<section class= "title">
+
+  <h1>{{controller.genre.name}}</h1>
+  <img src="{{controller.genre.image}}" width="600">
+</section>
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
 <button type="button" name="button"><a ui-sref="genresIndex">Back</a></button>
+<section>
+  <h4>Description</h4>
+  <p>{{controller.genre.description}}</p>
+  <button class="btn btn-primary" ui-sref="home">Back</button>
+</section>
+<section>
+  <h4>The Instructors</h4>
+  <ul>
+    <li ng-repeat="teacher in controller.genre.teachers">
+      <img src="{{teacher.image}}" width="40">
+    </li>
+  </ul>
+</section>
 
-<img src="{{controller.genre.image}}" width="600">
-
-<h4>Description</h4>
-<p>{{controller.genre.description}}</p>
-
-<h4>The Instructors</h4>
-<ul>
-  <li ng-repeat="teacher in controller.genre.teachers">
-    <img src="{{teacher.image}}" width="40">
-  </li>
-</ul>
-<h4>The Locations</h4>
-<ul>
-  <li ng-repeat="location in controller.genre.locations">
-    <p>{{location.name}}</p>
-    <p>{{location.address}}</p>
-  </li>
-</ul>
+<section>
+  <h4>The Locations</h4>
+  <ul>
+    <li ng-repeat="location in controller.genre.locations">
+      <p>{{location.name}}</p>
+      <p>{{location.address}}</p>
+    </li>
+  </ul>
+</section>

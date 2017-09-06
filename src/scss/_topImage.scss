@@ -1,0 +1,18 @@
+.topImage{
+  position: relative;
+  img {
+    width:100%;
+    // height: 300px;
+    padding: 0;
+    margin: 0;
+  }
+  .title{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    h1{
+      font-size: 72px;
+      color: white;
+    }
+  }
+}

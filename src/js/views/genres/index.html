@@ -1,11 +1,11 @@
-<h1>Genre Index</h1>
+<h1>Current Class Types</h1>
+
+<button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="genresNew">Add New Class Type</button>
 
 <ul>
   <li ng-repeat="genre in controller.genres">
     <h2 ui-sref="genresShow({ id: genre.id })">{{ genre.name }}</h2>
     <img src="{{genre.image}}" width="200">
+    <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
   </li>
 </ul>
-
-<button class="btn btn-primary" ui-sref="home">Back</button>
-<button class="btn btn-primary" ui-sref="genresNew">Add New Genre</button>

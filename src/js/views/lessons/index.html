@@ -1,13 +1,13 @@
-<h1>lessons index</h1>
+<h1>Current Lessons</h1>
 
+<button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="lessonsNew">Add New Lesson</button>
+<br>
 <ul>
   <li ng-repeat="lesson in controller.lessons">
     <h2 ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name }}</h2>
     <p> Time: {{ lesson.time | date: "h:mma" }}</p>
     <p> Date: {{ lesson.date}}</p>
     <p> Teacher: {{ lesson.teacher.name }}</p>
+    <a ng-show="main.user.admin === 'admin'" ui-sref="lessonsEdit({ id: controller.lesson.id })">Edit</a>
   </li>
 </ul>
-
-<button class="btn btn-primary" ui-sref="home">Back</button>
-<button class="btn btn-primary" ui-sref="lessonsNew">Add New Lesson</button>

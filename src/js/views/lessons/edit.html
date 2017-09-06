@@ -1,4 +1,4 @@
-<h1>{{controller.lesson.genre.name}} Edit</h1>
+<h1>Edit Class</h1>
 
 <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
   <div class="form-group">
@@ -25,7 +25,7 @@
     <input type="time" id="time" ng-model="controller.lesson.time">
   </div>
 
-  <button class="btn btn-primary" ui-sref="lessonsShow({ id: controller.lesson.id })">Cancel</button>
+  <button class="btn btn-primary" ui-sref="lessonsIndex">Cancel</button>
 
 
   <input class="btn btn-primary" type="submit">

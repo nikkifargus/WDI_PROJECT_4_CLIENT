@@ -1,10 +1,11 @@
-<h1>Locations Index</h1>
+<h1>Current Locations</h1>
+
+<button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="locationsNew">Add New Locaton</button>
 
 <ul>
   <li ng-repeat="location in controller.locations">
     <h2 ui-sref="locationsShow({ id: location.id })">{{ location.name }}</h2>
+    <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">Edit</a>
+
   </li>
 </ul>
-
-<button class="btn btn-primary" ui-sref="home">Back</button>
-<button class="btn btn-primary" ui-sref="locationsNew">Add New Locaton</button>

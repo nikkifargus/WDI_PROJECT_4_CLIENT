@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <title>Project 4 Client</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgBXW8fuYJWVq9S5Gyebd9xYXFheCdTgc"
-    type="text/javascript"></script>
-    <base href="/" />
+  type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <base href="/" />
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -13,7 +14,7 @@
 </head>
 <body ng-controller= "MainCtrl as main">
   <header>
-    <nav class="navbar navbar-default">
+    <nav>
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -23,42 +24,39 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="home">Fitness Fun</a>
+          <a class="navbar-brand" ui-sref="landing">Fitness Fun</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li ng-hide="main.user">
-              <a ui-sref="register">Register</a>
+              <a ui-sref="register"><p>REGISTER</p></a>
             </li>
             <li ng-hide="main.user">
-              <a ui-sref="login">Login</a>
+              <a ui-sref="login"><p>LOGIN</p></a>
             </li>
             <li ng-show="main.user">
-              <a ui-sref="lessonsIndex">Classes</a>
+              <a ui-sref="home"><p>HOME</p></a>
+            </li>
+            <li ng-show="main.user">
+              <a ui-sref="lessonsIndex"><p>CLASS SCHEDULE</p></a>
             </li>
             <li ng-show="main.user.admin === 'admin'">
-              <a ui-sref="teachersIndex">Teachers</a>
-            </li>
-            <li ng-show="main.user.admin === 'admin'">
-              <a ui-sref="genresIndex">Class Type</a>
-            </li>
-            <li ng-show="main.user.admin === 'admin'">
-              <a ui-sref="locationsIndex">Locations</a>
+              <a ui-sref="add"><p>ADD</p></a>
             </li>
             <li>
-              <p class="navbar-text"><a ui-sref="usersShow({ id: main.user.id })"> {{main.user.firstname}}</a></p>
+              <a ui-sref="usersShow({ id: main.user.id })"><p>{{main.user.firstname}}</p></a>
             </li>
             <li ng-show="main.user">
-              <a ng-click="main.logout()">Logout</a>
+              <a ng-click="main.logout()"><p>LOGOUT</p></a>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-  <main class="container" ui-view>
+  <main ui-view>
 
   </main>
 </body>

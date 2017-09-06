@@ -7,9 +7,17 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   $locationProvider.html5Mode(true);
 
   $stateProvider
-  .state('home', {
+  .state('landing', {
     url: '/',
+    templateUrl: '/js/views/landing.html'
+  })
+  .state('home', {
+    url: '/home',
     templateUrl: '/js/views/home.html'
+  })
+  .state('add', {
+    url: '/add',
+    templateUrl: '/js/views/add.html'
   })
   .state('register', {
     url: '/register',

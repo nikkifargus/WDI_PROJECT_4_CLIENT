@@ -1,13 +1,11 @@
 
-<section>
-
+<section class= "title">
 <h1>{{controller.lesson.genre.name}}</h1>
+<img src="{{controller.lesson.genre.image}}" width="600">
+</section>
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="lessonsEdit({ id: controller.lesson.id })">Edit</a>
 <button type="button" name="button"><a ui-sref="lessonsIndex">Back</a></button>
-
-<img src="{{controller.lesson.genre.image}}" width="600">
-</section>
 
 <section>
 <h4>Description</h4>

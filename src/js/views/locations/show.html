@@ -4,5 +4,4 @@
 <button type="button" name="button"><a ui-sref="locationsIndex">Back</a></button>
 
 <p>Address: {{controller.location.address}}</p>
-<p>Lat: {{controller.location.lat}}</p>
-<p>Long: {{controller.location.long}}</p>
+<google-map center="{ lat: controller.location.lat, lng: controller.location.long }"></google-map>
