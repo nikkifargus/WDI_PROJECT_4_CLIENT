@@ -2,8 +2,8 @@ angular
 .module('project4')
 .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['CurrentUserService', '$rootScope', '$state', 'Teacher', 'Genre'];
-function MainCtrl(CurrentUserService, $rootScope, $state, Teacher, Genre) {
+MainCtrl.$inject = ['CurrentUserService', '$rootScope', '$state', 'Teacher', 'Genre', 'Location'];
+function MainCtrl(CurrentUserService, $rootScope, $state, Teacher, Genre, Location) {
   const vm = this;
 
   $rootScope.$on('loggedIn', () => {

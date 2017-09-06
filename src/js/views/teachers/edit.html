@@ -4,7 +4,7 @@
       <div class="col-xs-12 divTitle">
         <hr>
         <div class="text">
-          <h2>EDIT TEACHER</h2>
+          <h4>EDIT TEACHER</h4>
         </div>
       </div>
     </div>
@@ -23,12 +23,12 @@
         <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
       </div>
       <div class="buttonGroup">
-        <button class="btn btn-primary" ui-sref="teachersShow({ id: controller.teacher.id })">CANCEL</button>
-        <button class="btn btn-primary" type="submit">SAVE</button>
+        <button class="btn " ui-sref="teachersShow({ id: controller.teacher.id })">CANCEL</button>
+        <button class="btn " type="submit">SAVE</button>
       </div>
     </form>
     <div class="buttonGroup">
-      <button ng-show="main.user.admin === 'admin'"  class="btn btn-primary" ng-click="controller.delete()" name="button">DELETE TEACHER</button>
+      <button ng-show="main.user.admin === 'admin'"  class="btn " ng-click="controller.delete()" name="button">DELETE TEACHER</button>
     </div>
   </section>
 </section>

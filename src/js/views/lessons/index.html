@@ -1,22 +1,24 @@
-<div class= "divider">
-  <div class="row">
-    <div class="col-xs-12 divTitle">
-      <hr>
-      <div class="text">
-        <h1>CURRENT CLASSES</h1>
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>CURRENT CLASSES</h4>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="lessonsNew">ADD NEW LESSON</button>
+<button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="lessonsNew">ADD NEW LESSON</button>
 <br>
 <ul>
   <li ng-repeat="lesson in controller.lessons">
-    <h2 ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name | uppercase }}</h2>
+    <h5 ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name | uppercase }}</h5>
     <p> Time: {{ lesson.time | date: "h:mma" }}</p>
     <p> Date: {{ lesson.date}}</p>
     <p> Teacher: {{ lesson.teacher.name | uppercase}}</p>
     <a ng-show="main.user.admin === 'admin'" ui-sref="lessonsEdit({ id: controller.lesson.id })">EDIT</a>
   </li>
 </ul>
+</section>

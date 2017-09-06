@@ -2,40 +2,38 @@
 @import 'topImage';
 @import 'nav';
 @import 'divider';
+@import 'form';
+@import 'button';
 
 h1{
-  font-size: 15vw;
+  font-size: 12vw;
 }
 
 h2{
-  font-size: 3vw;
+  font-size: 6vw;
 }
 
 h3{
+  font-size: 5vw;
+}
+
+h4{
+  font-size:4vw;
+}
+
+h5{
+  font-size:3vw;
+}
+p{
   font-size: 2vw;
 }
-//
-// h4{
-//   font-size:
-// }
-//
-// h5{
-//   font-size:
-// }
 
 
 main {
   font-family: 'Quicksand', sans-serif;
+  margin-top: 6%;
 }
 
 ul{
   list-style-type: none;
-}
-
-.formContainer{
-  margin-left: 15%;
-  margin-right: 15%;
-  .buttonGroup{
-    text-align: center;
-  }
 }

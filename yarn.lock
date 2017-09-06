@@ -10,14 +10,14 @@
     css "^2.2.1"
     normalize-path "^2.1.1"
     source-map "^0.5.6"
-    through2 "^2.0.3"
+    through4 "^2.0.3"
 
 "@gulp-sourcemaps/map-sources@1.X":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/map-sources/-/map-sources-1.0.0.tgz#890ae7c5d8c877f6d384860215ace9d7ec945bda"
   dependencies:
     normalize-path "^2.0.1"
-    through2 "^2.0.3"
+    through4 "^2.0.3"
 
 abbrev@1:
   version "1.1.0"
@@ -1075,7 +1075,7 @@ cloneable-readable@^1.0.0:
   dependencies:
     inherits "^2.0.1"
     process-nextick-args "^1.0.6"
-    through2 "^2.0.1"
+    through4 "^2.0.1"
 
 co@3.1.0:
   version "3.1.0"
@@ -1365,7 +1365,7 @@ decompress-tar@^3.0.0:
     object-assign "^2.0.0"
     strip-dirs "^1.0.0"
     tar-stream "^1.1.1"
-    through2 "^0.6.1"
+    through4 "^0.6.1"
     vinyl "^0.4.3"
 
 decompress-tarbz2@^3.0.0:
@@ -1377,7 +1377,7 @@ decompress-tarbz2@^3.0.0:
     seek-bzip "^1.0.3"
     strip-dirs "^1.0.0"
     tar-stream "^1.1.1"
-    through2 "^0.6.1"
+    through4 "^0.6.1"
     vinyl "^0.4.3"
 
 decompress-targz@^3.0.0:
@@ -1388,7 +1388,7 @@ decompress-targz@^3.0.0:
     object-assign "^2.0.0"
     strip-dirs "^1.0.0"
     tar-stream "^1.1.1"
-    through2 "^0.6.1"
+    through4 "^0.6.1"
     vinyl "^0.4.3"
 
 decompress-unzip@^3.0.0:
@@ -1399,7 +1399,7 @@ decompress-unzip@^3.0.0:
     read-all-stream "^3.0.0"
     stat-mode "^0.2.0"
     strip-dirs "^1.0.0"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl "^1.0.0"
     yauzl "^2.2.1"
 
@@ -2165,7 +2165,7 @@ glob-stream@^3.1.5:
     glob2base "^0.0.12"
     minimatch "^2.0.1"
     ordered-read-streams "^0.1.0"
-    through2 "^0.6.1"
+    through4 "^0.6.1"
     unique-stream "^1.0.0"
 
 glob-stream@^5.3.2:
@@ -2177,7 +2177,7 @@ glob-stream@^5.3.2:
     glob-parent "^3.0.0"
     micromatch "^2.3.7"
     ordered-read-streams "^0.3.0"
-    through2 "^0.6.0"
+    through4 "^0.6.0"
     to-absolute-glob "^0.1.1"
     unique-stream "^2.0.2"
 
@@ -2374,7 +2374,7 @@ gulp-autoprefixer@^3.1.1:
     autoprefixer "^6.0.0"
     gulp-util "^3.0.0"
     postcss "^5.0.4"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
 gulp-babel@^6.1.2:
@@ -2385,7 +2385,7 @@ gulp-babel@^6.1.2:
     gulp-util "^3.0.0"
     object-assign "^4.0.1"
     replace-ext "0.0.1"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
 gulp-clean@^0.3.2:
@@ -2394,14 +2394,14 @@ gulp-clean@^0.3.2:
   dependencies:
     gulp-util "^2.2.14"
     rimraf "^2.2.8"
-    through2 "^0.4.2"
+    through4 "^0.4.2"
 
 gulp-concat@^2.6.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/gulp-concat/-/gulp-concat-2.6.1.tgz#633d16c95d88504628ad02665663cee5a4793353"
   dependencies:
     concat-with-sourcemaps "^1.0.0"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl "^2.0.0"
 
 gulp-decompress@^1.2.0:
@@ -2420,7 +2420,7 @@ gulp-htmlhint@^0.3.1:
     gulp-util "^3.0.0"
     htmlhint "^0.9.5"
     strip-json-comments "^2.0.0"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
 
 gulp-htmlmin@^3.0.0:
   version "3.0.0"
@@ -2439,7 +2439,7 @@ gulp-if@^2.0.2:
   dependencies:
     gulp-match "^1.0.3"
     ternary-stream "^2.0.1"
-    through2 "^2.0.1"
+    through4 "^2.0.1"
 
 gulp-imagemin@^3.1.1:
   version "3.3.0"
@@ -2450,7 +2450,7 @@ gulp-imagemin@^3.1.1:
     imagemin "^5.0.0"
     plur "^2.0.0"
     pretty-bytes "^4.0.2"
-    through2-concurrent "^1.1.0"
+    through4-concurrent "^1.1.0"
   optionalDependencies:
     imagemin-gifsicle "^5.0.0"
     imagemin-jpegtran "^5.0.0"
@@ -2467,7 +2467,7 @@ gulp-inject@^4.1.0:
     group-array "^0.3.0"
     gulp-util "^3.0.0"
     stream-to-array "^2.3.0"
-    through2 "^2.0.1"
+    through4 "^2.0.1"
 
 gulp-jshint@^2.0.2:
   version "2.0.4"
@@ -2477,7 +2477,7 @@ gulp-jshint@^2.0.2:
     lodash "^4.12.0"
     minimatch "^3.0.3"
     rcloader "^0.2.2"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
 
 gulp-match@^1.0.3:
   version "1.0.3"
@@ -2513,7 +2513,7 @@ gulp-notify@^2.2.0:
     lodash.template "^3.0.0"
     node-notifier "^4.1.0"
     node.extend "^1.1.3"
-    through2 "^0.6.3"
+    through4 "^0.6.3"
 
 gulp-order@^1.1.1:
   version "1.1.1"
@@ -2527,7 +2527,7 @@ gulp-plumber@^1.1.0:
   resolved "https://registry.yarnpkg.com/gulp-plumber/-/gulp-plumber-1.1.0.tgz#f12176c2d0422f60306c242fff6a01a394faba09"
   dependencies:
     gulp-util "^3"
-    through2 "^2"
+    through4 "^2"
 
 gulp-rename@^1.2.0, gulp-rename@^1.2.2:
   version "1.2.2"
@@ -2548,7 +2548,7 @@ gulp-sass@^2.3.2:
     gulp-util "^3.0"
     lodash.clonedeep "^4.3.2"
     node-sass "^3.4.2"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
 gulp-sourcemaps@1.6.0:
@@ -2558,7 +2558,7 @@ gulp-sourcemaps@1.6.0:
     convert-source-map "^1.1.1"
     graceful-fs "^4.1.2"
     strip-bom "^2.0.0"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl "^1.0.0"
 
 gulp-sourcemaps@^2.2.0:
@@ -2575,7 +2575,7 @@ gulp-sourcemaps@^2.2.0:
     graceful-fs "4.X"
     source-map "0.X"
     strip-bom-string "1.X"
-    through2 "2.X"
+    through4 "2.X"
     vinyl "1.X"
 
 gulp-strip-css-comments@^1.2.0:
@@ -2584,7 +2584,7 @@ gulp-strip-css-comments@^1.2.0:
   dependencies:
     gulp-util "^3.0.0"
     strip-css-comments "^3.0.0"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
 
 gulp-uglify@^2.0.0:
   version "2.1.2"
@@ -2594,7 +2594,7 @@ gulp-uglify@^2.0.0:
     has-gulplog "^0.1.0"
     lodash "^4.13.1"
     make-error-cause "^1.1.1"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     uglify-js "~2.8.10"
     uglify-save-license "^0.4.1"
     vinyl-sourcemaps-apply "^0.2.0"
@@ -2609,7 +2609,7 @@ gulp-util@^2.2.14:
     lodash.template "^2.4.1"
     minimist "^0.2.0"
     multipipe "^0.1.0"
-    through2 "^0.5.0"
+    through4 "^0.5.0"
     vinyl "^0.2.1"
 
 gulp-util@^3, gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.2, gulp-util@^3.0.5, gulp-util@^3.0.7:
@@ -2632,7 +2632,7 @@ gulp-util@^3, gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0
     multipipe "^0.1.2"
     object-assign "^3.0.0"
     replace-ext "0.0.1"
-    through2 "^2.0.0"
+    through4 "^2.0.0"
     vinyl "^0.5.0"
 
 gulp@^3.9.1:
@@ -5401,7 +5401,7 @@ ternary-stream@^2.0.1:
     duplexify "^3.5.0"
     fork-stream "^0.0.4"
     merge-stream "^1.0.0"
-    through2 "^2.0.1"
+    through4 "^2.0.1"
 
 text-table@^0.2.0:
   version "0.2.0"
@@ -5418,43 +5418,43 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-through2-concurrent@^1.1.0:
+through4-concurrent@^1.1.0:
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/through2-concurrent/-/through2-concurrent-1.1.1.tgz#11cb4ea4c9e31bca6e4c1e6dba48d1c728c3524b"
+  resolved "https://registry.yarnpkg.com/through4-concurrent/-/through4-concurrent-1.1.1.tgz#11cb4ea4c9e31bca6e4c1e6dba48d1c728c3524b"
   dependencies:
-    through2 "^2.0.0"
+    through4 "^2.0.0"
 
-through2-filter@^2.0.0:
+through4-filter@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/through2-filter/-/through2-filter-2.0.0.tgz#60bc55a0dacb76085db1f9dae99ab43f83d622ec"
+  resolved "https://registry.yarnpkg.com/through4-filter/-/through4-filter-2.0.0.tgz#60bc55a0dacb76085db1f9dae99ab43f83d622ec"
   dependencies:
-    through2 "~2.0.0"
+    through4 "~2.0.0"
     xtend "~4.0.0"
 
-through2@2.X, through2@^2, through2@^2.0.0, through2@^2.0.1, through2@^2.0.3, through2@~2.0.0:
+through4@2.X, through4@^2, through4@^2.0.0, through4@^2.0.1, through4@^2.0.3, through4@~2.0.0:
   version "2.0.3"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
+  resolved "https://registry.yarnpkg.com/through4/-/through4-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-through2@^0.4.2:
+through4@^0.4.2:
   version "0.4.2"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-0.4.2.tgz#dbf5866031151ec8352bb6c4db64a2292a840b9b"
+  resolved "https://registry.yarnpkg.com/through4/-/through4-0.4.2.tgz#dbf5866031151ec8352bb6c4db64a2292a840b9b"
   dependencies:
     readable-stream "~1.0.17"
     xtend "~2.1.1"
 
-through2@^0.5.0:
+through4@^0.5.0:
   version "0.5.1"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-0.5.1.tgz#dfdd012eb9c700e2323fd334f38ac622ab372da7"
+  resolved "https://registry.yarnpkg.com/through4/-/through4-0.5.1.tgz#dfdd012eb9c700e2323fd334f38ac622ab372da7"
   dependencies:
     readable-stream "~1.0.17"
     xtend "~3.0.0"
 
-through2@^0.6.0, through2@^0.6.1, through2@^0.6.3:
+through4@^0.6.0, through4@^0.6.1, through4@^0.6.3:
   version "0.6.5"
-  resolved "https://registry.yarnpkg.com/through2/-/through2-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
+  resolved "https://registry.yarnpkg.com/through4/-/through4-0.6.5.tgz#41ab9c67b29d57209071410e1d7a7a968cd3ad48"
   dependencies:
     readable-stream ">=1.0.33-1 <1.1.0-0"
     xtend ">=4.0.0 <4.1.0-0"
@@ -5629,7 +5629,7 @@ unique-stream@^2.0.2:
   resolved "https://registry.yarnpkg.com/unique-stream/-/unique-stream-2.2.1.tgz#5aa003cfbe94c5ff866c4e7d668bb1c4dbadb369"
   dependencies:
     json-stable-stringify "^1.0.0"
-    through2-filter "^2.0.0"
+    through4-filter "^2.0.0"
 
 universalify@^0.1.0:
   version "0.1.1"
@@ -5747,7 +5747,7 @@ vinyl-fs@^0.3.0:
     graceful-fs "^3.0.0"
     mkdirp "^0.5.0"
     strip-bom "^1.0.0"
-    through2 "^0.6.1"
+    through4 "^0.6.1"
     vinyl "^0.4.0"
 
 vinyl-fs@^2.2.0, vinyl-fs@^2.4.3:
@@ -5767,8 +5767,8 @@ vinyl-fs@^2.2.0, vinyl-fs@^2.4.3:
     readable-stream "^2.0.4"
     strip-bom "^2.0.0"
     strip-bom-stream "^1.0.0"
-    through2 "^2.0.0"
-    through2-filter "^2.0.0"
+    through4 "^2.0.0"
+    through4-filter "^2.0.0"
     vali-date "^1.0.0"
     vinyl "^1.0.0"
 

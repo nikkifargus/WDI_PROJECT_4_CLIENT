@@ -1,31 +1,43 @@
-<h1>CREATE NEW CLASS</h1>
-
-<form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewLesson()">
-  <div class="form-group">
-    <label for="genres"> SELECT CLASS TYPE</label>
-    <select name="genres" ng-model="controller.lesson.genre_id"  ng-options="option.id as option.name for option in controller.genres">
-    </select>
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>CREATE NEW CLASS</h4>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="teachers"> SELECT TEACHER</label>
-    <select name="teachers" ng-model="controller.lesson.teacher_id"  ng-options="option.id as option.name for option in controller.teachers">
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="locations"> SELECT LOCATION</label>
-    <select name="locations" ng-model="controller.lesson.location_id"  ng-options="option.id as option.name for option in controller.locations">
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="date">DATE</label>
-    <input type="date" id="date" ng-model="controller.lesson.date">
-  </div>
-  <div class="form-group">
-    <label for="time">TIME</label>
-    <input type="time" id="time" ng-model="controller.lesson.time">
-  </div>
-
-  <button class="btn btn-primary" ui-sref="lessonsIndex">CANCEL</button>
-
-  <button class="btn btn-primary" type="submit">SAVE</button>
-</form>
+  <section class= "formContainer">
+    <form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewLesson()">
+      <div class="form-group">
+        <label for="genres"> SELECT CLASS TYPE</label>
+        <select name="genres" ng-model="controller.lesson.genre_id"  ng-options="option.id as option.name for option in controller.genres">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="teachers"> SELECT TEACHER</label>
+        <select name="teachers" ng-model="controller.lesson.teacher_id"  ng-options="option.id as option.name for option in controller.teachers">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="locations"> SELECT LOCATION</label>
+        <select name="locations" ng-model="controller.lesson.location_id"  ng-options="option.id as option.name for option in controller.locations">
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">DATE</label>
+        <input type="date" id="date" ng-model="controller.lesson.date">
+      </div>
+      <div class="form-group">
+        <label for="time">TIME</label>
+        <input type="time" id="time" ng-model="controller.lesson.time">
+      </div>
+      <div class="buttonGroup">
+        <button class="btn " ui-sref="lessonsIndex">CANCEL</button>
+        <button class="btn " type="submit">SAVE</button>
+      </div>
+    </form>
+  </section>
+</section>

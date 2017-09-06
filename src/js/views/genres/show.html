@@ -1,28 +1,58 @@
-<section class= "title">
-
-  <h1>{{controller.genre.name | uppercase}}</h1>
-  <img src="{{controller.genre.image}}" width="600">
+<section class="topImage">
+    <div class="row title">
+      <div class="col-xs-12"><h1>{{controller.genre.name | uppercase}}</h1></div>
+    </div>
+  <img src="{{controller.genre.image}}" alt="">
 </section>
+
+<section class= "container">
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
 <button type="button" name="button"><a ui-sref="genresIndex">BACK</a></button>
-<section>
-  <h4>DESCRIPTION</h4>
+
+<div class= "divider">
+  <div class="row">
+    <div class="col-xs-12 divTitle">
+      <hr>
+      <div class="text">
+        <h4>DESCRIPTION</h4>
+      </div>
+    </div>
+  </div>
+</div>
   <p>{{controller.genre.description | uppercase}}</p>
-  <button class="btn btn-primary" ui-sref="home">BACK</button>
-</section>
-<section>
-  <h4>THE INSTRUCTORS</h4>
+  <button class="btn " ui-sref="home">BACK</button>
+
+
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>THE TEACHERS</h4>
+        </div>
+      </div>
+    </div>
+  </div>
   <ul>
     <li ng-repeat="teacher in controller.genre.teachers">
       <img src="{{teacher.image}}" width="40">
       <p>{{teacher.name | uppercase}}</p>
     </li>
   </ul>
-</section>
 
-<section>
-  <h4>The Locations</h4>
+
+
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>THE LOCATIONS</h4>
+        </div>
+      </div>
+    </div>
+  </div>
   <ul>
     <li ng-repeat="location in controller.genre.locations">
       <p>{{location.name}}</p>

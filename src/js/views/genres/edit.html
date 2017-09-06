@@ -1,4 +1,16 @@
-<h1>EDIT CLASS TYPE</h1>
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>EDIT CLASS TYPE</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class= "formContainer">
 
 <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
@@ -11,9 +23,15 @@
   <div class="form-group">
     <input class="form-control" type="text" name="image" ng-model="controller.genre.image" placeholder="image">
   </div>
-  <button class="btn btn-primary" ui-sref="genresIndex">Cancel</button>
+  <div class="buttonGroup">
 
-  <input class="btn btn-primary" type="submit" value="Submit" />
+  <button class="btn " ui-sref="genresIndex">Cancel</button>
+  <button class="btn " type="submit">SAVE</button>
+</div>
 </form>
+<div class="buttonGroup">
 
-<button ng-show="main.user.admin === 'admin'"  class="btn btn-primary" ng-click="controller.delete()" name="button">DELETE CLASS TYPE</button>
+<button ng-show="main.user.admin === 'admin'"  class="btn " ng-click="controller.delete()" name="button">DELETE CLASS TYPE</button>
+</div>
+</section>
+</section>

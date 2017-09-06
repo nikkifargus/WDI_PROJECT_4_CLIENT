@@ -4,7 +4,7 @@
       <div class="col-xs-12 divTitle">
         <hr>
         <div class="text">
-          <h2>CREATE NEW LOCATION</h2>
+          <h4>CREATE NEW LOCATION</h4>
         </div>
       </div>
     </div>
@@ -12,23 +12,24 @@
 
   <section class= "formContainer">
 
-<form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewLocation()">
+    <form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewLocation()">
+      <div class="form-group">
+        <input class="form-control" type="text" name="admin" ng-model="controller.location.name" placeholder="Name of Location">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="address" ng-model="controller.location.address" placeholder="Address">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="float" name="lat" ng-model="controller.location.lat" placeholder="latitude">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="float" name="long" ng-model="controller.location.long" placeholder="longitude">
+      </div>
+      <div class="buttonGroup">
 
-  <div class="form-group">
-    <input class="form-control" type="text" name="admin" ng-model="controller.location.name" placeholder="Name of Location">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="address" ng-model="controller.location.address" placeholder="Address">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="float" name="lat" ng-model="controller.location.lat" placeholder="latitude">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="float" name="long" ng-model="controller.location.long" placeholder="longitude">
-  </div>
-
-  <button class="btn btn-primary" ui-sref="locationsIndex">Cancel</button>
-  <button class="btn btn-primary" type="submit">SAVE</button>
-</form>
-</section>
+        <button class="btn " ui-sref="locationsIndex">Cancel</button>
+        <button class="btn " type="submit">SAVE</button>
+      </div>
+    </form>
+  </section>
 </section>
