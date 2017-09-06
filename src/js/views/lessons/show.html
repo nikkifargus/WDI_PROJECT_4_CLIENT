@@ -1,23 +1,35 @@
+
+<section>
+
 <h1>{{controller.lesson.genre.name}}</h1>
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="lessonsEdit({ id: controller.lesson.id })">Edit</a>
 <button type="button" name="button"><a ui-sref="lessonsIndex">Back</a></button>
 
 <img src="{{controller.lesson.genre.image}}" width="600">
+</section>
 
+<section>
 <h4>Description</h4>
 <p>{{controller.lesson.genre.description}}</p>
 <p> Time: {{ controller.lesson.time | date: "h:mma" }}</p>
 <p> Date: {{ controller.lesson.date}}</p>
+</section>
 
+<section>
 <h4>The Instructor</h4>
 <img src="{{controller.lesson.teacher.image}}" width="100">
 <p>{{controller.lesson.teacher.description}}</p>
+</section>
 
+<section>
 <h4>The Location</h4>
 <p>{{controller.lesson.location.name}}</p>
 <p>{{controller.lesson.location.address}}</p>
+<google-map center="{ lat: controller.lesson.location.lat, lng: controller.lesson.location.long }"></google-map>
+</section>
 
+<section>
 <h4>Who's going</h4>
 <ul>
 <li ng-repeat="user in controller.lesson.users">
@@ -27,3 +39,4 @@
 
 <button type="submit" name="button" ng-click="controller.attending()">Join</button>
 <button type="submit" name="button" ng-click="controller.notAttending()">Leave</button>
+</section>

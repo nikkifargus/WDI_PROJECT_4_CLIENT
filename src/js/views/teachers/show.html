@@ -1,17 +1,21 @@
-<h1>{{controller.teacher.name}}</h1>
-
-<a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">Edit</a>
-<button type="button" name="button"><a ui-sref="teachersIndex">Back</a></button>
-
-<p>{{controller.teacher.description}}</p>
-<img src="{{controller.teacher.image}}" width="200">
-
-<li ng-repeat="genre in controller.teacher.genres">
-  <p>{{genre.name}}</p>
-  <div><img src="{{genre.image}}" width="300"></div>
-</li>
-
-<li ng-repeat="location in controller.locations">
-  <p>{{location.name}}</p>
-  <p>{{location.address}}</p>
-</li>
+<section>
+  <h1>{{controller.teacher.name}}</h1>
+  <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">Edit</a>
+  <button type="button" name="button"><a ui-sref="teachersIndex">Back</a></button>
+  <p>{{controller.teacher.description}}</p>
+  <img src="{{controller.teacher.image}}" width="200">
+</section>
+<section>
+  <h1>Classes</h1>
+  <li ng-repeat="genre in controller.teacher.genres">
+    <p>{{genre.name}}</p>
+    <div><img src="{{genre.image}}" width="300"></div>
+  </li>
+</section>
+<section>
+  <h1>Locations</h1>
+  <li ng-repeat="location in controller.locations">
+    <p>{{location.name}}</p>
+    <p>{{location.address}}</p>
+  </li>
+</section>

@@ -2,15 +2,16 @@ angular
 .module('project4')
 .controller('LessonsShowCtrl', LessonsShowCtrl);
 
-LessonsShowCtrl.$inject = ['Lesson', '$stateParams', 'CurrentUserService'];
-function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService) {
+LessonsShowCtrl.$inject = ['Lesson', '$stateParams', 'CurrentUserService', '$scope'];
+function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService, $scope) {
   const vm = this;
+  // getLatLng();
 
-  vm.attending = userAttending;
+  vm.attending    = userAttending;
   vm.notAttending = notAttending;
-  vm.lesson = Lesson.get({ id: $stateParams.id });
+  vm.lesson       = Lesson.get({ id: $stateParams.id });
 
-  
+
 
   function userAttending(){
     // if current user id is already in the array of user_ids - nothing
@@ -39,4 +40,15 @@ function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService) {
 
     });
   }
+
+  // getLatLng();
+  // function getLatLng(){
+  //   Lesson.get({ id: $stateParams.id })
+  //   .$promise
+  //   .then(data => {
+  //     const lat  = data.location.lat;
+  //     const long = data.location.long;
+  //     const latlong = lat + long;
+  //   });
+  // }
 }

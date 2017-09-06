@@ -11,9 +11,8 @@ function TeachersShowCtrl(Teacher, $stateParams) {
   .$promise
   .then(data => {
     vm.teacher = data;
-
-    filterLocations();
     
+    filterLocations();
   });
 
   function filterLocations() {
@@ -21,4 +20,6 @@ function TeachersShowCtrl(Teacher, $stateParams) {
       return t.id === location.id && t.name === location.name;
     }) === index);
   }
+
+
 }

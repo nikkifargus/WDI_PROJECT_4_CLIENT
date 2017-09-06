@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="home">Fitness Class App</a>
+          <a class="navbar-brand" ui-sref="home">Fitness Fun</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,16 +36,16 @@
               <a ui-sref="login">Login</a>
             </li>
             <li ng-show="main.user">
-              <a ui-sref="lessonsIndex">Lesson Schedule</a>
+              <a ui-sref="lessonsIndex">Classes</a>
             </li>
             <li ng-show="main.user.admin === 'admin'">
-              <a ui-sref="teachersIndex">All Teachers</a>
+              <a ui-sref="teachersIndex">Teachers</a>
             </li>
             <li ng-show="main.user.admin === 'admin'">
-              <a ui-sref="genresIndex">All Genres</a>
+              <a ui-sref="genresIndex">Class Type</a>
             </li>
             <li ng-show="main.user.admin === 'admin'">
-              <a ui-sref="locationsIndex">All Locations</a>
+              <a ui-sref="locationsIndex">Locations</a>
             </li>
             <li>
               <p class="navbar-text"><a ui-sref="usersShow({ id: main.user.id })"> {{main.user.firstname}}</a></p>
