@@ -1,21 +1,47 @@
-<h1>FITNESS FUN</h1>
+<section class="topImage">
+    <div class="row title">
+      <div class="col-xs-12"><h1>FITNESS FUN</h1></div>
+    </div>
+  <img src="https://cdn.pixabay.com/photo/2016/08/05/19/29/rock-1573068_960_720.jpg" alt="">
+</section>
 
-<section>
-  <h2>OUR CLASSES</h2>
+<section class= "container" >
 
-  <ul>
-    <li ng-repeat="genre in main.genre">
+<div class= "divider">
+  <div class="row">
+    <div class="col-xs-12 divTitle">
+      <hr>
+      <div class="text">
+      <h2>OUR CLASSES</h2>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class= "genreSection">
+  <ul class= "row">
+    <li class= "col-lg-3 col-md-6 col-sm-1" ng-repeat="genre in main.genre">
       <div ui-sref="genresShow({ id: genre.id })">
-        <img src="{{genre.image}}" width="300">
+        <div class="genrePhoto"><img src="{{genre.image}}"></div>
         <p>{{genre.name | uppercase}}</p>
       </div>
     </li>
   </ul>
-</section>
+</div>
 
-<section>
-  <h2>OUR INSTRUCTORS</h2>
+<div class= "divider">
+  <div class="row">
+    <div class="col-xs-12 divTitle">
+      <hr>
+      <div class="text">
+        <h2>OUR TEACHERS</h2>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+<div>
   <ul>
     <li ng-repeat="teacher in main.teacher">
       <div ui-sref="teachersShow({ id: teacher.id })">
@@ -24,4 +50,5 @@
       </div>
     </li>
   </ul>
+</div>
 </section>

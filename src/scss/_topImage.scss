@@ -8,11 +8,15 @@
   }
   .title{
     position: absolute;
-    text-align: center;
     width: 100%;
-    h1{
-      font-size: 72px;
-      color: white;
+    text-align: center;
+    div{
+      margin: 0 auto;
+      background-color: red;
+      h1{
+        color: white;
+      }
     }
+
   }
 }

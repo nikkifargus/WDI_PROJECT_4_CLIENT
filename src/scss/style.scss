@@ -1,7 +1,33 @@
 @import 'map';
 @import 'topImage';
 @import 'nav';
+@import 'divider';
+
+h1{
+  font-size: 15vw;
+}
+
+// h2{
+//   font-size:
+// }
+//
+// h3{
+//   font-size:
+// }
+//
+// h4{
+//   font-size:
+// }
+//
+// h5{
+//   font-size:
+// }
+
 
 main {
   font-family: 'Quicksand', sans-serif;
+}
+
+ul{
+  list-style-type: none;
 }

@@ -1,12 +1,32 @@
 <section>
-  <h1>{{controller.user.firstname | uppercase}} {{controller.user.lastname | uppercase}}</h1>
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h1>{{controller.user.firstname | uppercase}} {{controller.user.lastname | uppercase}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
   <h4>{{controller.user.description | uppercase}}</h4>
   <img src="{{controller.user.image}}" width="220">
   <button type="button" name="button"><a ui-sref="usersEdit({ id: controller.user.id })">EDIT</a></button>
   <button type="button" name="button"><a ui-sref="home">BACK</a></button>
 </section>
 <section>
-  <h1>MY CLASSES</h1>
+
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h2>MY CLASSES</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <ul>
     <li ng-repeat="lesson in controller.user.lessons">
       <p ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name | uppercase}}</p>
