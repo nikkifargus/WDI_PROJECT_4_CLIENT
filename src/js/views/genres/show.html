@@ -1,21 +1,22 @@
 <section class= "title">
 
-  <h1>{{controller.genre.name}}</h1>
+  <h1>{{controller.genre.name | uppercase}}</h1>
   <img src="{{controller.genre.image}}" width="600">
 </section>
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
-<button type="button" name="button"><a ui-sref="genresIndex">Back</a></button>
+<button type="button" name="button"><a ui-sref="genresIndex">BACK</a></button>
 <section>
-  <h4>Description</h4>
-  <p>{{controller.genre.description}}</p>
-  <button class="btn btn-primary" ui-sref="home">Back</button>
+  <h4>DESCRIPTION</h4>
+  <p>{{controller.genre.description | uppercase}}</p>
+  <button class="btn btn-primary" ui-sref="home">BACK</button>
 </section>
 <section>
-  <h4>The Instructors</h4>
+  <h4>THE INSTRUCTORS</h4>
   <ul>
     <li ng-repeat="teacher in controller.genre.teachers">
       <img src="{{teacher.image}}" width="40">
+      <p>{{teacher.name | uppercase}}</p>
     </li>
   </ul>
 </section>

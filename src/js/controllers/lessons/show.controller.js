@@ -2,8 +2,8 @@ angular
 .module('project4')
 .controller('LessonsShowCtrl', LessonsShowCtrl);
 
-LessonsShowCtrl.$inject = ['Lesson', '$stateParams', 'CurrentUserService', '$scope'];
-function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService, $scope) {
+LessonsShowCtrl.$inject = ['Lesson', '$stateParams', 'CurrentUserService'];
+function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService) {
   const vm = this;
   // getLatLng();
 

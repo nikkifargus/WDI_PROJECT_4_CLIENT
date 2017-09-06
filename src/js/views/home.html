@@ -1,24 +1,26 @@
-<h1>Fitness Fun</h1>
+<h1>FITNESS FUN</h1>
 
 <section>
-  <h2>Our Classes</h2>
+  <h2>OUR CLASSES</h2>
 
   <ul>
     <li ng-repeat="genre in main.genre">
       <div ui-sref="genresShow({ id: genre.id })">
         <img src="{{genre.image}}" width="300">
+        <p>{{genre.name | uppercase}}</p>
       </div>
     </li>
   </ul>
 </section>
 
 <section>
-  <h2>Our Instructors</h2>
+  <h2>OUR INSTRUCTORS</h2>
 
   <ul>
     <li ng-repeat="teacher in main.teacher">
       <div ui-sref="teachersShow({ id: teacher.id })">
         <img src="{{teacher.image}}" width="100">
+        <p>{{teacher.name | uppercase}}</p>
       </div>
     </li>
   </ul>

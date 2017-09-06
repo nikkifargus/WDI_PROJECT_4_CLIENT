@@ -1,21 +1,21 @@
 <section>
-  <h1>{{controller.teacher.name}}</h1>
-  <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">Edit</a>
-  <button type="button" name="button"><a ui-sref="teachersIndex">Back</a></button>
-  <p>{{controller.teacher.description}}</p>
+  <h1>{{controller.teacher.name | uppercase}}</h1>
+  <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">EDIT</a>
+  <button type="button" name="button"><a ui-sref="teachersIndex">BACK</a></button>
+  <p>{{controller.teacher.description | uppercase}}</p>
   <img src="{{controller.teacher.image}}" width="200">
 </section>
 <section>
-  <h1>Classes</h1>
+  <h1>CLASSES</h1>
   <li ng-repeat="genre in controller.teacher.genres">
-    <p>{{genre.name}}</p>
+    <p>{{genre.name| uppercase}}</p>
     <div><img src="{{genre.image}}" width="300"></div>
   </li>
 </section>
 <section>
-  <h1>Locations</h1>
+  <h1>LOCATIONS</h1>
   <li ng-repeat="location in controller.locations">
-    <p>{{location.name}}</p>
-    <p>{{location.address}}</p>
+    <p>{{location.name| uppercase}}</p>
+    <p>{{location.address| uppercase}}</p>
   </li>
 </section>

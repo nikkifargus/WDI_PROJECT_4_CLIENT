@@ -1,4 +1,4 @@
-<h1>Edit Teacher</h1>
+<h1>EDIT TEACHER</h1>
 
 <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
@@ -12,9 +12,9 @@
     <input class="form-control" type="text" name="image" ng-model="controller.teacher.image" placeholder="image">
   </div>
 
-  <button class="btn btn-primary" ui-sref="teachersShow({ id: controller.teacher.id })">Cancel</button>
+  <button class="btn btn-primary" ui-sref="teachersShow({ id: controller.teacher.id })">CANCEL</button>
 
   <input class="btn btn-primary" type="submit" value="Submit" />
 </form>
 
-<button class="btn btn-primary" ng-click="controller.delete()" name="button">Delete Teacher</button>
+<button ng-show="main.user.admin === 'admin'"  class="btn btn-primary" ng-click="controller.delete()" name="button">DELETE TEACHER</button>

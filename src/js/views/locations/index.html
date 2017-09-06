@@ -1,11 +1,11 @@
-<h1>Current Locations</h1>
+<h1>CURRENT LOCATIONS</h1>
 
-<button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="locationsNew">Add New Locaton</button>
+<button ng-show="main.user.admin === 'admin'" class="btn btn-primary" ui-sref="locationsNew">ADD NEW LOCATION</button>
 
 <ul>
   <li ng-repeat="location in controller.locations">
-    <h2 ui-sref="locationsShow({ id: location.id })">{{ location.name }}</h2>
-    <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">Edit</a>
+    <h2 ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</h2>
+    <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">EDIT</a>
 
   </li>
 </ul>

@@ -5,8 +5,7 @@
   <title>Project 4 Client</title>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgBXW8fuYJWVq9S5Gyebd9xYXFheCdTgc"
   type="text/javascript"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-  <base href="/" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Quicksand" rel="stylesheet">  <base href="/" />
   <!-- inject:js -->
   <!-- endinject -->
   <!-- inject:css -->
@@ -24,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="landing">Fitness Fun</a>
+          <a class="navbar-brand" ui-sref="landing">FITNESS FUN</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,7 +45,7 @@
               <a ui-sref="add"><p>ADD</p></a>
             </li>
             <li>
-              <a ui-sref="usersShow({ id: main.user.id })"><p>{{main.user.firstname}}</p></a>
+              <a ui-sref="usersShow({ id: main.user.id })"><p>{{main.user.firstname | uppercase}}</p></a>
             </li>
             <li ng-show="main.user">
               <a ng-click="main.logout()"><p>LOGOUT</p></a>

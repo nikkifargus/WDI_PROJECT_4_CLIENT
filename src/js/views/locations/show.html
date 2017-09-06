@@ -1,7 +1,7 @@
-<h1>{{controller.location.name}}</h1>
+<h1>{{controller.location.name | uppercase}}</h1>
 
-<a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">Edit</a>
-<button type="button" name="button"><a ui-sref="locationsIndex">Back</a></button>
+<a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">EDIT</a>
+<button type="button" name="button"><a ui-sref="locationsIndex">BACK</a></button>
 
-<p>Address: {{controller.location.address}}</p>
+<p>ADDRESS: {{controller.location.address | uppercase}}</p>
 <google-map center="{ lat: controller.location.lat, lng: controller.location.long }"></google-map>

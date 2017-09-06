@@ -1,15 +1,15 @@
 <section>
-  <h1>{{controller.user.firstname}} {{controller.user.lastname}}</h1>
-  <h4>{{controller.user.description}}</h4>
+  <h1>{{controller.user.firstname | uppercase}} {{controller.user.lastname | uppercase}}</h1>
+  <h4>{{controller.user.description | uppercase}}</h4>
   <img src="{{controller.user.image}}" width="220">
-  <button type="button" name="button"><a ui-sref="usersEdit({ id: controller.user.id })">Edit</a></button>
-  <button type="button" name="button"><a ui-sref="home">Back</a></button>
+  <button type="button" name="button"><a ui-sref="usersEdit({ id: controller.user.id })">EDIT</a></button>
+  <button type="button" name="button"><a ui-sref="home">BACK</a></button>
 </section>
 <section>
-  <h1>My classes</h1>
+  <h1>MY CLASSES</h1>
   <ul>
     <li ng-repeat="lesson in controller.user.lessons">
-      <p ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name }}</p>
+      <p ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name | uppercase}}</p>
       <img src="{{lesson.genre.image}}" width="100">
     </li>
   </ul>

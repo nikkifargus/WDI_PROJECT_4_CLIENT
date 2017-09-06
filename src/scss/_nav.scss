@@ -1,13 +1,15 @@
 nav{
   .container{
-
+    .navbar-brand{
+      font-family: 'Quicksand', sans-serif;      color: #6dc2bc;
+      font-size: 26px;
+    }
     p{
       color: black;
       font-size: 16px;
-      font-family: 'Open Sans Condensed', sans-serif;
-    }
-    .navbar-toggle collapsed{
-      color: black;
+      font-family: 'Quicksand', sans-serif;    }
+      .navbar-toggle collapsed{
+        color: black;
+      }
     }
   }
-}

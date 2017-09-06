@@ -1,24 +1,23 @@
 <section class="topImage">
   <!-- <div class="container"> -->
-    <div class="row title">
-      <div class="col-xs-12"><h1>Lets Shake Things Up!</h1></div>
-    </div>
+  <div class="row title">
+    <div class="col-xs-12"><h1>LETS MAKE SOME CHANGES</h1></div>
+  </div>
   <!-- </div> -->
   <img src="https://cdn.pixabay.com/photo/2016/08/05/19/29/rock-1573068_960_720.jpg" alt="">
 </section>
 
 <ul>
-
-<li ng-show="main.user">
-  <a ui-sref="lessonsIndex"><p>Add or Edit a Class</p></a>
-</li>
-<li ng-show="main.user.admin === 'admin'">
-  <a ui-sref="teachersIndex"><p>Add or Edit a Teacher</p></a>
-</li>
-<li ng-show="main.user.admin === 'admin'">
-  <a ui-sref="genresIndex"><p>Add or Edit a Class Type</p></a>
-</li>
-<li ng-show="main.user.admin === 'admin'">
-  <a ui-sref="locationsIndex"><p>Add or Edit a Location</p></a>
-</li>
+  <li ng-show="main.user.admin === 'admin'">
+    <a ui-sref="genresIndex"><p>ADD OR EDIT A CLASS TYPE</p></a>
+  </li>
+  <li ng-show="main.user">
+    <a ui-sref="lessonsIndex"><p>ADD OR EDIT A CLASS</p></a>
+  </li>
+  <li ng-show="main.user.admin === 'admin'">
+    <a ui-sref="teachersIndex"><p>ADD OR EDIT A TEACHER</p></a>
+  </li>  
+  <li ng-show="main.user.admin === 'admin'">
+    <a ui-sref="locationsIndex"><p>ADD OR EDIT A LOCATION</p></a>
+  </li>
 </ul>

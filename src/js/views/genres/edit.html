@@ -1,4 +1,4 @@
-<h1>Edit Class Type</h1>
+<h1>EDIT CLASS TYPE</h1>
 
 <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
@@ -11,7 +11,9 @@
   <div class="form-group">
     <input class="form-control" type="text" name="image" ng-model="controller.genre.image" placeholder="image">
   </div>
-  <button class="btn btn-primary" ui-sref="genresShow({ id: controller.genre.id })">Cancel</button>
+  <button class="btn btn-primary" ui-sref="genresIndex">Cancel</button>
 
   <input class="btn btn-primary" type="submit" value="Submit" />
 </form>
+
+<button ng-show="main.user.admin === 'admin'"  class="btn btn-primary" ng-click="controller.delete()" name="button">DELETE CLASS TYPE</button>
