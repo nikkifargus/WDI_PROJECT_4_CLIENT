@@ -1,4 +1,17 @@
-<h1>Login</h1>
+
+<section class= "" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>LOGIN</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class= "formCont">
+
 <form ng-submit="login.login()">
   <div class="form-group">
     <input class="form-control" type="email" name="email" ng-model="login.user.email" placeholder="Email">
@@ -6,5 +19,10 @@
   <div class="form-group">
     <input class="form-control" type="password" name="password" ng-model="login.user.password" placeholder="Password">
   </div>
-  <input class="btn " type="submit" value="Submit">
+  <div class="buttonGroup">
+    <button class="btn " ui-sref="landing"><p>CANCEL</p></button>
+    <button class="btn " type="submit"><p>SUBMIT</p></button>
+  </div>
 </form>
+</section>
+</section>

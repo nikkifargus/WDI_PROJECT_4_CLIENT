@@ -2,13 +2,20 @@
     <div class="row title">
       <div class="col-xs-12"><h1>{{controller.genre.name | uppercase}}</h1></div>
     </div>
+    <div class="titleImage">
   <img src="{{controller.genre.image}}" alt="">
+</div>
 </section>
 
-<section class= "container">
+<section class= "">
 
-<a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
-<button type="button" name="button"><a ui-sref="genresIndex">BACK</a></button>
+  <div class="row">
+    <div class="buttonGroup">
+      <button ng-show="main.user.admin === 'admin'" class="btn " type="submit" ui-sref="genresEdit({ id: controller.lesson.id })" ><p>EDIT</p></button>
+    </div>
+  </div>
+<!-- <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
+<button type="button" name="button"><a ui-sref="genresIndex">BACK</a></button> -->
 
 <div class= "divider">
   <div class="row">
@@ -20,8 +27,10 @@
     </div>
   </div>
 </div>
+
+<div class="description">
   <p>{{controller.genre.description | uppercase}}</p>
-  <button class="btn " ui-sref="home">BACK</button>
+</div>
 
 
   <div class= "divider">
@@ -34,12 +43,24 @@
       </div>
     </div>
   </div>
-  <ul>
+
+  <div class="allTeachers">
+    <ul class="row">
+      <li class="col-xs-4" ng-repeat="teacher in controller.genre.teachers">
+        <div ui-sref="teachersShow({ id: teacher.id })" class="allTeacherImg" >
+          <img src="{{teacher.image}}" >
+          <p>{{teacher.name | uppercase}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <ul>
     <li ng-repeat="teacher in controller.genre.teachers">
       <img src="{{teacher.image}}" width="40">
       <p>{{teacher.name | uppercase}}</p>
     </li>
-  </ul>
+  </ul> -->
 
 
 
@@ -53,10 +74,10 @@
       </div>
     </div>
   </div>
+
   <ul>
     <li ng-repeat="location in controller.genre.locations">
       <p>{{location.name}}</p>
-      <p>{{location.address}}</p>
     </li>
   </ul>
 </section>

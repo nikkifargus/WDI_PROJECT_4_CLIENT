@@ -2,10 +2,12 @@
     <div class="row title">
       <div class="col-xs-12"><h1>FITNESS FUN</h1></div>
     </div>
-  <img src="https://cdn.pixabay.com/photo/2016/08/05/19/29/rock-1573068_960_720.jpg" alt="">
+    <div class="titleImage">
+  <img src="/images/rock-1573068_1920.jpg">
+</div>
 </section>
 
-<section class= "container" >
+<section class= "" >
 
 <div class= "divider">
   <div class="row">
@@ -20,14 +22,15 @@
 
 <div class= "genreSection">
   <ul class= "row">
-    <li class= "col-lg-3 col-md-6 col-sm-1" ng-repeat="genre in main.genre">
-      <div ui-sref="genresShow({ id: genre.id })">
-        <div class="genrePhoto"><img src="{{genre.image}}"></div>
-        <p>{{genre.name | uppercase}}</p>
+    <li class= "col-xs-4" ng-repeat="genre in main.genre">
+      <div class="genrePhoto" ui-sref="genresShow({ id: genre.id })">
+          <img class="img-fluid" src="{{genre.image}}">
       </div>
+      <p>{{genre.name | uppercase}}</p>
     </li>
   </ul>
 </div>
+
 
 <div class= "divider">
   <div class="row">
@@ -41,14 +44,15 @@
 </div>
 
 
-<div>
-  <ul>
-    <li ng-repeat="teacher in main.teacher">
-      <div ui-sref="teachersShow({ id: teacher.id })">
+<div class="allTeachers">
+  <ul class="row">
+    <li class="col-xs-4" ng-repeat="teacher in main.teacher">
+      <div class="allTeacherImg" ui-sref="teachersShow({ id: teacher.id })">
         <img src="{{teacher.image}}" width="100">
-        <p>{{teacher.name | uppercase}}</p>
       </div>
+      <p>{{teacher.name | uppercase}}</p>
     </li>
   </ul>
 </div>
+
 </section>

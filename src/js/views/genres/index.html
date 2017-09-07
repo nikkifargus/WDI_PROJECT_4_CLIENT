@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -16,7 +16,7 @@
   <li ng-repeat="genre in controller.genres">
     <h4 ui-sref="genresShow({ id: genre.id })">{{ genre.name | uppercase}}</h4>
     <img src="{{genre.image}}" width="200">
-    <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">EDIT</a>
+    <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: genre.id })">EDIT</a>
   </li>
 </ul>
 </section>

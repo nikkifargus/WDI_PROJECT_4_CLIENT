@@ -1,4 +1,4 @@
-<section class= "container">
+<section class= "">
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -9,12 +9,24 @@
       </div>
     </div>
 
-  </div>
-  <h4>{{controller.user.description | uppercase}}</h4>
-  <img src="{{controller.user.image}}" width="220">
-  <button type="button" name="button"><a ui-sref="usersEdit({ id: controller.user.id })">EDIT</a></button>
-  <button type="button" name="button"><a ui-sref="home">BACK</a></button>
+    <div class="row userShow">
+      <div class="col-xs-5">
+        <div class="userImg">
+          <img src="{{controller.user.image}}" >
+        </div>
+      </div>
+      <div class="col-xs-7">
+        <p>{{controller.user.description}}</p>
+        <p>{{controller.user.email}}</p>
+        <button class="btn " ui-sref="usersEdit({ id: controller.user.id })"><p>EDIT</p></button>
 
+      </div>
+    </div>
+  </div>
+
+  <!-- <h4>{{controller.user.description | uppercase}}</h4>
+  <img src="{{controller.user.image}}" width="220"> -->
+  <!-- <button class="btn " ui-sref="home"><p>BACK</p></button> -->
 
   <div class= "divider">
     <div class="row">
@@ -27,10 +39,19 @@
     </div>
   </div>
 
-  <ul>
-    <li ng-repeat="lesson in controller.user.lessons">
-      <p ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name | uppercase}}</p>
-      <img src="{{lesson.genre.image}}" width="100">
-    </li>
-  </ul>
+  <div class="lessonSection">
+    <ul class="row">
+      <li class= "col-xs-4" ng-repeat="lesson in controller.user.lessons">
+        <div class="lessonInfo" ui-sref="lessonsShow({ id: lesson.id })">
+          <div class="lessonText">
+          <h5 >Date: {{ lesson.date| date: 'shortDate'}}</h5>
+          <p> {{ lesson.genre.name | uppercase }} </p>
+          <p> {{ lesson.time | date: "h:mma" }}</p>
+          <p> Teacher: {{ lesson.teacher.name | uppercase}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 </section>

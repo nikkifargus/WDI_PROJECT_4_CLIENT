@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -9,36 +9,35 @@
       </div>
     </div>
   </div>
-  <section class= "formContainer">
-
+  <section class= "formCont">
     <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
       <div class="form-group">
-        <label for="genres"> SELECT CLASS TYPE</label>
-        <select name="genres" ng-model="controller.lesson.genre_id"  ng-options="option.id as option.name for option in controller.genres">
+        <label for="genres"> <p>SELECT CLASS TYPE</p></label>
+        <select name="genres" ng-model="controller.lesson.genre_id"  ng-options="option.id as option.name for option in controller.genres" value="{{controller.lesson.genre}}">
         </select>
       </div>
       <div class="form-group">
-        <label for="teachers"> SELECT TEACHER</label>
+        <label for="teachers"> <p>SELECT TEACHER</p></label>
         <select name="teachers" ng-model="controller.lesson.teacher_id"  ng-options="option.id as option.name for option in controller.teachers">
         </select>
       </div>
       <div class="form-group">
-        <label for="locations"> SELECT LOCATION</label>
+        <label for="locations"> <p>SELECT LOCATION</p></label>
         <select name="locations" ng-model="controller.lesson.location_id"  ng-options="option.id as option.name for option in controller.locations">
         </select>
       </div>
       <div class="form-group">
-        <label for="date">DATE</label>
+        <label for="date"><p>DATE</p></label>
         <input type="date" id="date" ng-model="controller.lesson.date">
       </div>
       <div class="form-group">
-        <label for="time">TIME</label>
+        <label for="time"><p>TIME</p></label>
         <input type="time" id="time" ng-model="controller.lesson.time">
       </div>
       <div class="buttonGroup">
 
-        <button class="btn " ui-sref="lessonsIndex">CANCEL</button>
-        <button class="btn " type="submit">SAVE</button>
+        <button class="btn " ui-sref="lessonsIndex"><p>CANCEL</p></button>
+        <button class="btn " type="submit"><p>SAVE</p></button>
       </div>
     </form>
     <div class="buttonGroup">

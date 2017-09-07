@@ -14,30 +14,35 @@ function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService) {
 
 
   function userAttending(){
-    // if current user id is already in the array of user_ids - nothing
-    // if it ISNT in the user_ids array - push id in and update
-
     console.log(CurrentUserService.currentUser.id);
     vm.lesson.user_ids.push(CurrentUserService.currentUser.id);
-    vm.lesson.users.push(CurrentUserService.currentUser.id);
-    // console.log(vm.lesson.users);
+    for (var i = 0; i < vm.lesson.users.length; i++) {
+      if (vm.lesson.users[i].id === CurrentUserService.currentUser.id ) {
+        console.log('hit');
+      }else{
+        vm.lesson.users.push(CurrentUserService.currentUser);
+      }
+    }
     Lesson
     .update({id: $stateParams.id}, {lesson: vm.lesson})
     .$promise
-    .then((data2) => {
-      console.log('2',data2);
-      console.log(vm.lesson.users);
+    .then(() => {
     });
   }
 
   function notAttending() {
     vm.lesson.user_ids.splice(vm.lesson.user_ids.indexOf(CurrentUserService.currentUser.id), 1);
-    vm.lesson.users.splice(vm.lesson.users.indexOf(CurrentUserService.currentUser.id), 1);
+    //loop over vm.lesson.users and when the id for an object inside == CurrentUserService.currentUser.id
+    // then splice that object to remove it from the array
+    for (var i = 0; i < vm.lesson.users.length; i++) {
+      if (vm.lesson.users[i].id === CurrentUserService.currentUser.id ) {
+        vm.lesson.users.splice(i, 1);
+      }
+    }
     Lesson
     .update({id: $stateParams.id}, {lesson: vm.lesson})
     .$promise
     .then(() => {
-
     });
   }
 

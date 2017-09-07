@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <section class= "formContainer">
+  <section class= "formCont">
 
     <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
@@ -25,13 +25,13 @@
       </div>
       <div class="buttonGroup">
 
-        <button class="btn " ui-sref="genresIndex">Cancel</button>
-        <button class="btn " type="submit">SAVE</button>
+        <button class="btn " ui-sref="genresIndex"><p>CANCEL</p></button>
+        <button class="btn " type="submit"><p>SAVE</p></button>
       </div>
     </form>
     <div class="buttonGroup">
 
-      <button ng-show="main.user.admin === 'admin'"  class="btn " ng-click="controller.delete()" name="button">DELETE CLASS TYPE</button>
+      <button ng-show="main.user.admin === 'admin'"  class="btn " ng-click="controller.delete()" name="button"><p>DELETE CLASS TYPE</p></button>
     </div>
   </section>
 </section>

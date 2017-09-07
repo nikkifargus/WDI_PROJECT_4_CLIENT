@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  <section class= "formContainer">
+  <section class= "formCont">
     <form ng-show="main.user.admin === 'admin'" ng-submit="controller.NewLesson()">
       <div class="form-group">
         <label for="genres"> SELECT CLASS TYPE</label>
@@ -35,8 +35,8 @@
         <input type="time" id="time" ng-model="controller.lesson.time">
       </div>
       <div class="buttonGroup">
-        <button class="btn " ui-sref="lessonsIndex">CANCEL</button>
-        <button class="btn " type="submit">SAVE</button>
+        <button class="btn " ui-sref="lessonsIndex"><p>CANCEL</p></button>
+        <button class="btn " type="submit"><p>SAVE</p></button>
       </div>
     </form>
   </section>

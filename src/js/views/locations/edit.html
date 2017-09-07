@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <section class= "formContainer">
+  <section class= "formCont">
     <form ng-show="main.user.admin === 'admin'" ng-submit="controller.update()">
 
       <div class="form-group">
@@ -26,7 +26,7 @@
         <input class="form-control" type="float" name="long" ng-model="controller.location.long" placeholder="longitude">
       </div>
       <div class="buttonGroup">
-        <button class="btn " ui-sref="locationsIndex">Cancel</button>
+        <button class="btn " ui-sref="locationsIndex"><p>CANCEL</p></button>
         <input class="btn " type="submit" value="Submit" />
       </div>
     </form>

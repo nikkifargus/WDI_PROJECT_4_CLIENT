@@ -5,13 +5,14 @@
 @import 'form';
 @import 'button';
 @import 'footer';
+@import 'pageSections';
 
 $lightGreen: #d3edeb;
 $darkGreen: #6dc2bc;
 $lightGrey: #575757;
 
 h1{
-  font-size: 12vw;
+  font-size: 9vw;
 }
 
 h2{
@@ -29,16 +30,21 @@ h4{
 h5{
   font-size:3vw;
 }
+
 p{
   font-size: 2vw;
+  margin: 0;
 }
-
 
 main {
   font-family: 'Quicksand', sans-serif;
-  // margin-top: 6%;
+  
 }
 
 ul{
   list-style-type: none;
+}
+
+img{
+  width: 100%;
 }

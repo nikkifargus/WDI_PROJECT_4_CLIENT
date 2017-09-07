@@ -2,12 +2,17 @@
     <div class="row title">
       <div class="col-xs-12"><h1>{{controller.lesson.genre.name | uppercase}}</h1></div>
     </div>
-  <img src="{{controller.lesson.genre.image}}" alt="">
+    <div class="titleImage">
+      <img src="{{controller.lesson.genre.image}}" alt="">
+    </div>
 </section>
 
-<section class= "container">
-<a ng-show="main.user.admin === 'admin'" ui-sref="lessonsEdit({ id: controller.lesson.id })">Edit</a>
-<button type="button" name="button"><a ui-sref="lessonsIndex">Back</a></button>
+<section class= "">
+<div class="row">
+  <div class="buttonGroup">
+    <button ng-show="main.user.admin === 'admin'" class="btn " type="submit" ui-sref="lessonsEdit({ id: controller.lesson.id })" ><p>EDIT</p></button>
+  </div>
+</div>
 
 <div class= "divider">
   <div class="row">
@@ -32,14 +37,22 @@
     <div class="col-xs-12 divTitle">
       <hr>
       <div class="text">
-        <h4>THE TEACER</h4>
+        <h4>THE TEACHER</h4>
       </div>
     </div>
   </div>
 </div>
 
-<img src="{{controller.lesson.teacher.image}}" width="100">
-<p>{{controller.lesson.teacher.description | uppercase}}</p>
+<div class="row">
+  <div class="col-xs-3">
+    <div class="teacherImg">
+      <img src="{{controller.lesson.teacher.image}}" >
+    </div>
+  </div>
+  <div class="col-xs-9">
+    <p>{{controller.lesson.teacher.description}}</p>
+  </div>
+</div>
 
 
 <div class= "divider">
@@ -53,8 +66,11 @@
   </div>
 </div>
 
-<h5>{{controller.lesson.location.name | uppercase}}</h5>
-<p>{{controller.lesson.location.address | uppercase}}</p>
+
+<!-- <div class="description"> -->
+  <h5>{{controller.lesson.location.name | uppercase}}</h5>
+  <p>{{controller.lesson.location.address | uppercase}}</p>
+<!-- </div> -->
 <google-map center="{ lat: controller.lesson.location.lat, lng: controller.lesson.location.long }"></google-map>
 
 
@@ -69,12 +85,22 @@
   </div>
 </div>
 
-<ul>
-<li ng-repeat="user in controller.lesson.users">
-  <img src="{{user.image}}" width="40">
-</li>
-</ul>
+<div class="attending">
+  <ul class="row">
+    <li class="col-xs-3" ng-repeat="user in controller.lesson.users">
+      <div class="attendImg" >
+        <img src="{{user.image}}" width= "100" >
+      </div>
+    </li>
+  </ul>
+</div>
 
-<button type="submit" name="button" ng-click="controller.attending()">JOIN</button>
-<button type="submit" name="button" ng-click="controller.notAttending()">LEAVE</button>
+<div class="row">
+  <div class="buttonGroup">
+    <button class="btn " type="submit" ng-click="controller.attending()" ><p>JOIN</p></button>
+    <button class="btn " type="submit" ng-click="controller.notAttending()" ><p>LEAVE</p></button>
+  </div>
+</div>
+
+
 </section>

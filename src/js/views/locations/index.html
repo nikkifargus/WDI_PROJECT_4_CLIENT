@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -15,7 +15,7 @@
 <ul>
   <li ng-repeat="location in controller.locations">
     <h4 ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</h4>
-    <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">EDIT</a>
+    <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: location.id })">EDIT</a>
 
   </li>
 </ul>

@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -9,11 +9,20 @@
       </div>
     </div>
   </div>
+  <div class="buttonGroup">
+    <button class="btn" ui-sref="teachersEdit({ id: controller.teacher.id })"><p>EDIT</p></button>
+  </div>
 
-  <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: controller.teacher.id })">EDIT</a>
-  <button type="button" name="button"><a ui-sref="teachersIndex">BACK</a></button>
-  <p>{{controller.teacher.description | uppercase}}</p>
-  <img src="{{controller.teacher.image}}" width="200">
+  <div class="row teacherShow">
+    <div class="col-xs-3">
+      <div class="teacherImg">
+        <img src="{{controller.teacher.image}}" >
+      </div>
+    </div>
+    <div class="col-xs-9">
+      <p>{{controller.teacher.description}}</p>
+    </div>
+  </div>
 
   <div class= "divider">
     <div class="row">
@@ -25,23 +34,37 @@
       </div>
     </div>
   </div>
-  <li ng-repeat="genre in controller.teacher.genres">
-    <p>{{genre.name| uppercase}}</p>
-    <div><img src="{{genre.image}}" width="300"></div>
-  </li>
 
-  <div class= "divider">
-    <div class="row">
-      <div class="col-xs-12 divTitle">
-        <hr>
-        <div class="text">
-          <h4>LOCATIONS</h4>
+  <div class= "genreSection">
+    <ul class= "row">
+      <li class= "col-xs-4" ng-repeat="genre in controller.teacher.genres">
+        <div class="genrePhoto" ui-sref="genresShow({ id: genre.id })">
+          <img class="img-fluid" src="{{genre.image}}">
         </div>
+        <p>{{genre.name | uppercase}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <li ng-repeat="genre in controller.teacher.genres">
+  <p>{{genre.name| uppercase}}</p>
+  <div><img src="{{genre.image}}" width="300"></div>
+</li> -->
+
+<div class= "divider">
+  <div class="row">
+    <div class="col-xs-12 divTitle">
+      <hr>
+      <div class="text">
+        <h4>LOCATIONS</h4>
       </div>
     </div>
   </div>
+</div>
+<ul>
   <li ng-repeat="location in controller.locations">
     <p>{{location.name| uppercase}}</p>
-    <p>{{location.address| uppercase}}</p>
   </li>
+</ul>
+
 </section>

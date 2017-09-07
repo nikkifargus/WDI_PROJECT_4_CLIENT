@@ -1,4 +1,4 @@
-<section class= "container" >
+<section class= "" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -9,16 +9,28 @@
       </div>
     </div>
   </div>
+  <div class="buttonGroup">
+    <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="lessonsNew">ADD NEW LESSON</button>
+  </div>
 
-<button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="lessonsNew">ADD NEW LESSON</button>
-<br>
-<ul>
-  <li ng-repeat="lesson in controller.lessons">
-    <h5 ui-sref="lessonsShow({ id: lesson.id })">{{ lesson.genre.name | uppercase }}</h5>
-    <p> Time: {{ lesson.time | date: "h:mma" }}</p>
-    <p> Date: {{ lesson.date}}</p>
-    <p> Teacher: {{ lesson.teacher.name | uppercase}}</p>
-    <a ng-show="main.user.admin === 'admin'" ui-sref="lessonsEdit({ id: controller.lesson.id })">EDIT</a>
-  </li>
-</ul>
+  <div class="lessonSection">
+    <ul class="row">
+      <li class= "col-xs-4" ng-repeat="lesson in controller.lessons">
+        <div class="lessonInfo" ui-sref="lessonsShow({ id: lesson.id })">
+          <div class="lessonText">
+          <h5 >Date: {{ lesson.date| date: 'shortDate'}}</h5>
+          <p> {{ lesson.genre.name | uppercase }} </p>
+
+          <p> {{ lesson.time | date: "h:mma" }}</p>
+          <p> Teacher: {{ lesson.teacher.name | uppercase}}</p>
+          </div>
+          <!-- <img src="https://cdn.pixabay.com/photo/2016/08/05/19/29/rock-1573068_960_720.jpg" alt=""> -->
+          <div class="buttonGroup">
+            <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="lessonsEdit({ id: lesson.id })">EDIT</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 </section>
