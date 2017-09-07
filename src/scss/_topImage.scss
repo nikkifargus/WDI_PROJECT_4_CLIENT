@@ -1,5 +1,6 @@
 .topImage{
   position: relative;
+  cursor: pointer;
   .titleImage{
     height: 40vw;
     overflow: hidden;
@@ -19,6 +20,9 @@
     margin-right: auto;
 
     h1{
+      color: #6dc2bc;
+    }
+    h3{
       color: #6dc2bc;
     }
   }

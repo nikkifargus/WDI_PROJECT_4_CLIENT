@@ -1,10 +1,10 @@
-<section class= "" >
+<section class= "container" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
         <hr>
         <div class="text">
-          <h4>CURRENT CLASSES</h4>
+          <h4>LESSON SCHEDULE</h4>
         </div>
       </div>
     </div>
@@ -18,13 +18,13 @@
       <li class= "col-xs-4" ng-repeat="lesson in controller.lessons">
         <div class="lessonInfo" ui-sref="lessonsShow({ id: lesson.id })">
           <div class="lessonText">
-          <h5 >Date: {{ lesson.date| date: 'shortDate'}}</h5>
           <p> {{ lesson.genre.name | uppercase }} </p>
-
-          <p> {{ lesson.time | date: "h:mma" }}</p>
-          <p> Teacher: {{ lesson.teacher.name | uppercase}}</p>
+          <p >{{ lesson.date| date: 'shortDate'}} at {{ lesson.time | date: "h:mma" }}</p>
+          <!-- <p> Teacher: {{ lesson.teacher.name | uppercase}}</p> -->
+          <div class="showLessonImg">
+            <img src="{{lesson.genre.image}}" alt="">
           </div>
-          <!-- <img src="https://cdn.pixabay.com/photo/2016/08/05/19/29/rock-1573068_960_720.jpg" alt=""> -->
+          </div>
           <div class="buttonGroup">
             <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="lessonsEdit({ id: lesson.id })">EDIT</button>
           </div>

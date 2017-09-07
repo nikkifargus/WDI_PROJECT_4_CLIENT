@@ -10,13 +10,15 @@
     </div>
   </div>
 
-<button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="locationsNew">ADD NEW LOCATION</button>
+  <div class="buttonGroup">
+    <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="locationsNew">ADD NEW LOCATION</button>
+  </div>
 
-<ul>
-  <li ng-repeat="location in controller.locations">
-    <h4 ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</h4>
-    <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: location.id })">EDIT</a>
+  <ul>
+    <li ng-repeat="location in controller.locations">
+      <h4 ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</h4>
+      <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: location.id })">EDIT</a>
 
-  </li>
-</ul>
+    </li>
+  </ul>
 </section>

@@ -7,11 +7,11 @@
 </div>
 </section>
 
-<section class= "">
-
+<section class= "container">
+<br>
   <div class="row">
     <div class="buttonGroup">
-      <button ng-show="main.user.admin === 'admin'" class="btn " type="submit" ui-sref="genresEdit({ id: controller.lesson.id })" ><p>EDIT</p></button>
+      <button class="btn " type="submit" ui-sref="lessonsIndex" ><p>SEE CLASS SCHEDULE</p></button>
     </div>
   </div>
 <!-- <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: controller.genre.id })">Edit</a>
@@ -30,6 +30,10 @@
 
 <div class="description">
   <p>{{controller.genre.description | uppercase}}</p>
+  <div class="buttonGroup">
+    <button ng-show="main.user.admin === 'admin'" class="btn " type="submit" ui-sref="genresEdit({ id: controller.genre.id })" ><p>EDIT</p></button>
+  </div>
+
 </div>
 
 
@@ -64,7 +68,7 @@
 
 
 
-  <div class= "divider">
+  <!-- <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
         <hr>
@@ -79,5 +83,5 @@
     <li ng-repeat="location in controller.genre.locations">
       <p>{{location.name}}</p>
     </li>
-  </ul>
+  </ul> -->
 </section>

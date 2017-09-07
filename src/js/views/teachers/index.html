@@ -1,4 +1,4 @@
-<section class= "" >
+<section class= "container" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -10,14 +10,29 @@
     </div>
   </div>
 
-<button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="teachersNew">ADD NEW TEACHER</button>
+  <div class="buttonGroup">
 
-<ul>
+<button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="teachersNew">ADD NEW TEACHER</button>
+</div>
+<br>
+<div class="allTeachers">
+  <ul class="row">
+    <li class="col-xs-4" ng-repeat="teacher in controller.teachers">
+      <div class="allTeacherImg" ui-sref="teachersShow({ id: teacher.id })">
+        <img src="{{teacher.image}}" width="100">
+      </div>
+      <p>{{teacher.name | uppercase}}</p>
+      <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="teachersEdit({ id: teacher.id })">EDIT</button>
+    </li>
+  </ul>
+</div>
+
+<!-- <ul>
   <li ng-repeat="teacher in controller.teachers">
     <img src="{{teacher.image}}" width="100">
     <h4 ui-sref="teachersShow({ id: teacher.id })">{{ teacher.name | uppercase }}</h4>
     <a ng-show="main.user.admin === 'admin'" ui-sref="teachersEdit({ id: teacher.id })">EDIT</a>
   </li>
-</ul>
+</ul> -->
 
 </section>

@@ -1,13 +1,16 @@
 <section class="topImage">
     <div class="row title">
-      <div class="col-xs-12"><h1>{{controller.lesson.genre.name | uppercase}}</h1></div>
+      <div class="col-xs-12">
+        <h1>{{controller.lesson.genre.name | uppercase}}</h1>
+        <h3>{{controller.lesson.date}}</h3>
+      </div>
     </div>
     <div class="titleImage">
       <img src="{{controller.lesson.genre.image}}" alt="">
     </div>
 </section>
 
-<section class= "">
+<section class= "container">
 <div class="row">
   <div class="buttonGroup">
     <button ng-show="main.user.admin === 'admin'" class="btn " type="submit" ui-sref="lessonsEdit({ id: controller.lesson.id })" ><p>EDIT</p></button>
@@ -27,8 +30,8 @@
 
 <div class="description">
 <p>{{controller.lesson.genre.description | uppercase}}</p>
-<p> Time: {{ controller.lesson.time | date: "h:mma" }}</p>
-<p> Date: {{ controller.lesson.date}}</p>
+<h5> Time: {{ controller.lesson.time | date: "h:mma" }}</h5>
+<h5> Date: {{ controller.lesson.date}}</h5>
 </div>
 
 
@@ -43,13 +46,13 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-3">
+<div class="row teacherShow">
+  <div class="col-xs-4">
     <div class="teacherImg">
       <img src="{{controller.lesson.teacher.image}}" >
     </div>
   </div>
-  <div class="col-xs-9">
+  <div class="col-xs-8">
     <p>{{controller.lesson.teacher.description}}</p>
   </div>
 </div>
@@ -103,5 +106,5 @@
   </div>
 </div>
 
-
+<br>
 </section>

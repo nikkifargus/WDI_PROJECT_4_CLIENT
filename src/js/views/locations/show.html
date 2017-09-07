@@ -1,4 +1,4 @@
-<section class= "" >
+<section class= "container" >
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -12,31 +12,12 @@
 
 
 <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: controller.location.id })">EDIT</a>
-<button type="button" name="button"><a ui-sref="locationsIndex">BACK</a></button>
+<!-- <button type="button" name="button"><a ui-sref="locationsIndex">BACK</a></button> -->
+<div class="description">
+  <p> {{controller.location.address | uppercase}}</p>
 
-<p>ADDRESS: {{controller.location.address | uppercase}}</p>
+</div>
 
 <google-map center="{ lat: controller.location.lat, lng: controller.location.long }"></google-map>
+<br>
 </section>
-
-<div class= "divider">
-  <div class="row">
-    <div class="col-xs-12 divTitle">
-      <hr>
-      <div class="text">
-      <h4>WHICH CLASSES?</h4>
-    </div>
-    </div>
-  </div>
-</div>
-
-<div class= "genreSection">
-  <ul class= "row">
-    <li class= "col-xs-4" ng-repeat="genre in controller.location.genre">
-      <div class="genrePhoto" ui-sref="genresShow({ id: genre.id })">
-          <img class="img-fluid" src="{{genre.image}}">
-      </div>
-      <p>{{genre.name | uppercase}}</p>
-    </li>
-  </ul>
-</div>

@@ -1,4 +1,4 @@
-<section class= "">
+<section class= "container">
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -19,7 +19,7 @@
         <p>{{controller.user.description}}</p>
         <br>
         <p>{{controller.user.email}}</p>
-        <button ng-show= "main.user.id === currentUser.id" class="btn " ui-sref="usersEdit({ id: controller.user.id })"><p>EDIT</p></button>
+        <button class="btn " ui-sref="usersEdit({ id: controller.user.id })"><p>EDIT</p></button>
 
       </div>
     </div>
@@ -40,15 +40,18 @@
     </div>
   </div>
 
+
   <div class="lessonSection">
     <ul class="row">
       <li class= "col-xs-4" ng-repeat="lesson in controller.user.lessons">
         <div class="lessonInfo" ui-sref="lessonsShow({ id: lesson.id })">
           <div class="lessonText">
-          <h5 >Date: {{ lesson.date| date: 'shortDate'}}</h5>
           <p> {{ lesson.genre.name | uppercase }} </p>
-          <p> {{ lesson.time | date: "h:mma" }}</p>
-          <p> Teacher: {{ lesson.teacher.name | uppercase}}</p>
+          <p >{{ lesson.date| date: 'shortDate'}} at {{ lesson.time | date: "h:mma" }}</p>
+          <!-- <p> Teacher: {{ lesson.teacher.name | uppercase}}</p> -->
+          <div class="showLessonImg">
+            <img src="{{lesson.genre.image}}" alt="">
+          </div>
           </div>
         </div>
       </li>
