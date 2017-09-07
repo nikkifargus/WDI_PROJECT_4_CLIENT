@@ -7,9 +7,26 @@
       cursor: pointer;
       width: 28vw;
       height: 15vw;
-      // background-color: red;
+      background-color: red;
       overflow: hidden;
       margin: 0 auto;
+    }
+  }
+}
+
+.addSection{
+  text-align: center;
+  padding: 0;
+  margin-top: 3%;
+  .row{
+    padding: 0;
+    .addPhoto{
+      cursor: pointer;
+      width: 21vw;
+      height: 13vw;
+      background-color: red;
+      overflow: hidden;
+      margin:0 auto;
     }
   }
 }
