@@ -1,4 +1,4 @@
-<section class= "" >
+
   <div class= "divider">
     <div class="row">
       <div class="col-xs-12 divTitle">
@@ -9,14 +9,30 @@
       </div>
     </div>
   </div>
+<section class= "container" >
+  <div class="buttonGroup">
+    <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="genresNew">ADD NEW CLASS TYPE</button>
+  </div>
+  <br>
+  <div class= "genreSection">
+    <ul class= "row">
+      <li class= "col-xs-4" ng-repeat="genre in controller.genres">
+        <div class="genrePhoto" ui-sref="genresShow({ id: genre.id })">
+          <img class="img-fluid" src="{{genre.image}}">
+        </div>
+        <p>{{genre.name | uppercase}}</p>
+        <div class="buttonGroup">
+          <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="lessonsEdit({ id: lesson.id })">EDIT</button>
+        </div>
 
-<button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="genresNew">ADD NEW CLASS TYPE</button>
-
-<ul>
+      </li>
+    </ul>
+  </div>
+  <!-- <ul>
   <li ng-repeat="genre in controller.genres">
-    <h4 ui-sref="genresShow({ id: genre.id })">{{ genre.name | uppercase}}</h4>
-    <img src="{{genre.image}}" width="200">
-    <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: genre.id })">EDIT</a>
-  </li>
-</ul>
+  <h4 ui-sref="genresShow({ id: genre.id })">{{ genre.name | uppercase}}</h4>
+  <img src="{{genre.image}}" width="200">
+  <a ng-show="main.user.admin === 'admin'" ui-sref="genresEdit({ id: genre.id })">EDIT</a>
+</li>
+</ul> -->
 </section>
