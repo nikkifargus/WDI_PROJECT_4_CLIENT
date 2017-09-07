@@ -1,30 +1,46 @@
-<h1>Register</h1>
-<form ng-submit="register.register()">
-
-  <div class="form-group">
-    <input class="form-control" type="text" name="firstname" ng-model="register.user.firstname" placeholder="First name">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="lastname" ng-model="register.user.lastname" placeholder="Last name">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="email" name="email" ng-model="register.user.email" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="description" ng-model="register.user.description" placeholder="Tell us a bit about yourself">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="text" name="image" ng-model="register.user.image" placeholder="Image">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="password" name="password" ng-model="register.user.password" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="password" name="password_confirmation" ng-model="register.user.password_confirmation" placeholder="Password confirmation">
-  </div>
-  <div class="form-group">
-    <input class="form-control" type="hidden" name="admin" ng-model="register.user.admin" value="client">
+<section class= "container" >
+  <div class= "divider">
+    <div class="row">
+      <div class="col-xs-12 divTitle">
+        <hr>
+        <div class="text">
+          <h4>REGISTER</h4>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <input class="btn " type="submit" value="Submit" />
-</form>
+  <section class= "formContainer">
+    <form ng-submit="register.register()">
+
+      <div class="form-group">
+        <input class="form-control" type="text" name="firstname" ng-model="register.user.firstname" placeholder="First name">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="lastname" ng-model="register.user.lastname" placeholder="Last name">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="email" name="email" ng-model="register.user.email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="description" ng-model="register.user.description" placeholder="Tell us a bit about yourself">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="text" name="image" ng-model="register.user.image" placeholder="Image">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="password" ng-model="register.user.password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="password_confirmation" ng-model="register.user.password_confirmation" placeholder="Password confirmation">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="hidden" name="admin" ng-model="register.user.admin" value="client">
+      </div>
+      <div class="buttonGroup">
+        <button class="btn " ui-sref="genresIndex">Cancel</button>
+        <button class="btn " type="submit">SAVE</button>
+      </div>
+    </form>
+  </section>
+</section>
