@@ -170,5 +170,5 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     controllerAs: 'controller'
   });
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
 }

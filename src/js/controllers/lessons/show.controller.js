@@ -16,14 +16,16 @@ function LessonsShowCtrl(Lesson, $stateParams, CurrentUserService) {
   function userAttending(){
     console.log(vm.lesson.users);
     vm.lesson.user_ids.push(CurrentUserService.currentUser.id);
-    for (var i = 0; i < vm.lesson.users.length; i++) {
-      if (vm.lesson.users[i].id === CurrentUserService.currentUser.id ) {
-        console.log('hit');
-      }else{
-        vm.lesson.users.push(CurrentUserService.currentUser);
-        // console.log(CurrentUserService.currentUser);
-      }
-    }
+    vm.lesson.users.push(CurrentUserService.currentUser);
+
+    // for (var i = 0; i < vm.lesson.users.length; i++) {
+    //   if (vm.lesson.users[i].id === CurrentUserService.currentUser.id ) {
+    //     console.log('hit');
+    //   }else{
+    //     vm.lesson.users.push(CurrentUserService.currentUser);
+    //     // console.log(CurrentUserService.currentUser);
+    //   }
+    // }
     Lesson
     .update({id: $stateParams.id}, {lesson: vm.lesson})
     .$promise
