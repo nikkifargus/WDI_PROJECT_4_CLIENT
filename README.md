@@ -1,8 +1,8 @@
 # Fitness Fun Class Scheduling App
 
-<img src="images/website.png"></img>
+<img src="WDI_PROJECT_4_CLIENT/src/images/website.png"></img>
 
-##Introduction
+## Introduction
 
 This was the final project for the WDI course at General Assembly. It was started and completed in the final week of the course. For my final project I wanted to create a website that solidified all the skills I had been working on for the past three months, as well as take advantage of using the relational database skills I had recently acquired when we moved onto learning Ruby on Rails in the last few weeks of the course.
 
@@ -10,7 +10,7 @@ I decided to make a fitness class scheduling app called Fitness Fun
 
 Click <a href="https://fitness-fun-classes.herokuapp.com/ ">here</a> to have a look at my website.
 
-##Objectives
+## Objectives
 
 The objectives of this project were:
 
@@ -22,7 +22,7 @@ The objectives of this project were:
 Recently I  started going to a new fitness class called Jumping Fitness whose website was not well designed and the UX was really bad. Therefore based on the criteria above, I decided to redesign the website, but in order to create slightly more complex relationships between resources, I added a few extra bits of functionality.
 
 
-##Planning
+## Planning
 
 For this project I probably carried out the most thorough planning of any of the projects. I started by researching multiple fitness class websites to decide on the style. I then drew out the wireframes using realtimeboard.
 
