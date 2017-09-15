@@ -1,6 +1,6 @@
 # Fitness Fun Class Scheduling App
 
-<img src="/images/website.png"></img>
+<img src="src/images/website.png"></img>
 
 ## Introduction
 
