@@ -1,6 +1,6 @@
 # Fitness Fun Class Scheduling App
 
-<img src="WDI_PROJECT_4_CLIENT/src/images/website.png"></img>
+<img src="/images/website.png"></img>
 
 ## Introduction
 
@@ -35,7 +35,7 @@ I then went on to plan out the relationships between resources and write out my 
 <img src="images/scaffold.jpg"></img>
 
 
-##Development
+## Development
 
 After all of the planning, my first step to building the website was to set up the backend. I spent 1 - 2 days setting up the resources, relationships and authentication in the backend. Most of this was achieved using terminal commands and a few amendments to the files using Ruby.  
 
@@ -81,6 +81,6 @@ Finally I styled the pages using Scss and the CSS framework Bootstrap. I was rea
 
 <img src="images/divider_code.png"></img>
 
-##Future Improvements
+## Future Improvements
 
 To make Fitness Fun even more user friendly, there are some features I would like to add: Google auto complete when an admin creates a new location; max capacity for joining a class and a waiting list for if it is full. The last thing I would like to add is the ability for clients to review the class and/or teacher.
