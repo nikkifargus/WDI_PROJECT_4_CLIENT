@@ -26,13 +26,13 @@ Recently I  started going to a new fitness class called Jumping Fitness whose we
 
 For this project I probably carried out the most thorough planning of any of the projects. I started by researching multiple fitness class websites to decide on the style. I then drew out the wireframes using realtimeboard.
 
-<img src="WDI_PROJECT_4_CLIENT/src/images/wireframe.png"></img>
+<img src="src/images/wireframe.png"></img>
 
 I then went on to plan out the relationships between resources and write out my scaffolding for the API.
 
-<img src="images/relationships.JPG"></img>
+<img src="src/images/relationships.JPG"></img>
 
-<img src="images/scaffold.jpg"></img>
+<img src="src/images/scaffold.jpg"></img>
 
 
 ## Development
@@ -79,7 +79,7 @@ Once this was set up it was a case of making sure that I had all of my RESTful r
 
 Finally I styled the pages using Scss and the CSS framework Bootstrap. I was really pleased with the look, however I still want to implement a few CSS animations in order to make it look more professional. One of my favourite pieces of styling that I implemented was the page dividers which you can see how I achieved this below:
 
-<img src="images/divider_code.png"></img>
+<img src="src/images/divider_code.png"></img>
 
 ## Future Improvements
 
