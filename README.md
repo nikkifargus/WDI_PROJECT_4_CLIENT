@@ -26,7 +26,7 @@ Recently I  started going to a new fitness class called Jumping Fitness whose we
 
 For this project I probably carried out the most thorough planning of any of the projects. I started by researching multiple fitness class websites to decide on the style. I then drew out the wireframes using realtimeboard.
 
-<img src="images/wireframe.png"></img>
+<img src="WDI_PROJECT_4_CLIENT/src/images/wireframe.png"></img>
 
 I then went on to plan out the relationships between resources and write out my scaffolding for the API.
 
