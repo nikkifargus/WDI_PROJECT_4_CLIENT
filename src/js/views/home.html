@@ -21,14 +21,14 @@
 </div>
 
 <div class= "genreSection">
-  <ul class= "row">
-    <li class= "col-xs-12 col-md-4" ng-repeat="genre in main.genre">
+  <div class= "row">
+    <div class= "col-xs-4 " ng-repeat="genre in main.genre">
       <div class="genrePhoto" ui-sref="genresShow({ id: genre.id })">
           <img class="img-fluid" src="{{genre.image}}">
       </div>
       <p>{{genre.name | uppercase}}</p>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 
 
