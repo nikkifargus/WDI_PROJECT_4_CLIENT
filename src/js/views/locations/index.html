@@ -14,11 +14,14 @@
     <button ng-show="main.user.admin === 'admin'" class="btn " ui-sref="locationsNew">ADD NEW LOCATION</button>
   </div>
 
-  <ul>
-    <li ng-repeat="location in controller.locations">
-      <h4 ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</h4>
+<div class="lessonIndex">
+  <div>
+    <div ng-repeat="location in controller.locations">
+      <h5 ui-sref="locationsShow({ id: location.id })">{{ location.name | uppercase }}</h5>
       <a ng-show="main.user.admin === 'admin'" ui-sref="locationsEdit({ id: location.id })">EDIT</a>
 
-    </li>
-  </ul>
+    </div>
+  </div>
+</div>
+
 </section>

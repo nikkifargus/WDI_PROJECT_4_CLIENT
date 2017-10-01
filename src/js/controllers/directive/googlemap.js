@@ -2,9 +2,9 @@ angular
 .module('project4')
 .directive('googleMap', googleMap);
 
-googleMap.$inject = ['$window', 'Lesson', '$stateParams'];
+googleMap.$inject = ['$window'];
 
-function googleMap($window, Lesson, $stateParams) {
+function googleMap($window) {
   const directive = {
     restrict: 'E',
     replace: true,
@@ -19,104 +19,104 @@ function googleMap($window, Lesson, $stateParams) {
           center: scope.center,
           styles: [
             {
-              "featureType": "landscape",
-              "stylers": [
+              'featureType': 'landscape',
+              'stylers': [
                 {
-                  "hue": "#FFA800"
+                  'hue': '#FFA800'
                 },
                 {
-                  "saturation": 0
+                  'saturation': 0
                 },
                 {
-                  "lightness": 0
+                  'lightness': 0
                 },
                 {
-                  "gamma": 1
+                  'gamma': 1
                 }
               ]
             },
             {
-              "featureType": "road.highway",
-              "stylers": [
+              'featureType': 'road.highway',
+              'stylers': [
                 {
-                  "hue": "#53FF00"
+                  'hue': '#53FF00'
                 },
                 {
-                  "saturation": -73
+                  'saturation': -73
                 },
                 {
-                  "lightness": 40
+                  'lightness': 40
                 },
                 {
-                  "gamma": 1
+                  'gamma': 1
                 }
               ]
             },
             {
-              "featureType": "road.arterial",
-              "stylers": [
+              'featureType': 'road.arterial',
+              'stylers': [
                 {
-                  "hue": "#FBFF00"
+                  'hue': '#FBFF00'
                 },
                 {
-                  "saturation": 0
+                  'saturation': 0
                 },
                 {
-                  "lightness": 0
+                  'lightness': 0
                 },
                 {
-                  "gamma": 1
+                  'gamma': 1
                 }
               ]
             },
             {
-              "featureType": "road.local",
-              "stylers": [
+              'featureType': 'road.local',
+              'stylers': [
                 {
-                  "hue": "#00FFFD"
+                  'hue': '#00FFFD'
                 },
                 {
-                  "saturation": 0
+                  'saturation': 0
                 },
                 {
-                  "lightness": 30
+                  'lightness': 30
                 },
                 {
-                  "gamma": 1
+                  'gamma': 1
                 }
               ]
             },
             {
-              "featureType": "water",
-              "stylers": [
+              'featureType': 'water',
+              'stylers': [
                 {
-                  "hue": "#00BFFF"
+                  'hue': '#00BFFF'
                 },
                 {
-                  "saturation": 6
+                  'saturation': 6
                 },
                 {
-                  "lightness": 8
+                  'lightness': 8
                 },
                 {
-                  "gamma": 1
+                  'gamma': 1
                 }
               ]
             },
             {
-              "featureType": "poi",
-              "stylers": [
+              'featureType': 'poi',
+              'stylers': [
                 {
-                  "hue": "#679714"
+                  'hue': '#679714'
                 },
                 {
-                  "saturation": 33.4
+                  'saturation': 33.4
                 },
                 {
-                  "lightness": -25.4
+                  'lightness': -25.4
                 },
                 {
-                  "gamma": 1
+                  'gamma': 1
                 }
               ]
             }
@@ -128,7 +128,7 @@ function googleMap($window, Lesson, $stateParams) {
           map: map,
           animation: $window.google.maps.Animation.DROP
         });
-      }, 200);
+      }, 300);
     }
   };
   return directive;
