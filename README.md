@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This was the final project for the WDI course at General Assembly. It was started and completed in the final week of the course. For my final project I wanted to create a website that solidified all the skills I had been working on for the past three months, as well as take advantage of using the relational database skills I had recently acquired when we moved onto learning Ruby on Rails in the last few weeks of the course.
+This was the final project for the WDI course at General Assembly. It was carried out in the final week of the course. For my final project I wanted to create a website that solidified all the skills I had been working on for the past three months, as well as take advantage of using the relational database skills I had recently acquired when we moved onto learning Ruby on Rails in the last few weeks of the course.
 
 I decided to make a fitness class scheduling app called Fitness Fun
 
@@ -17,7 +17,8 @@ The objectives of this project were:
 1) Create an authenticated App
 2) Use Ruby on Rails to create an API backend with at least 3 resources.
 3) Use AngularJS to create the frontend
-4) Style the App using a CSS framework
+4) Use PostgreSQL database
+5) Style the App using a CSS framework
 
 Recently I  started going to a new fitness class called Jumping Fitness whose website was not well designed and the UX was really bad. Therefore based on the criteria above, I decided to redesign the website, but in order to create slightly more complex relationships between resources, I added a few extra bits of functionality.
 
@@ -34,7 +35,7 @@ I then went on to plan out the relationships between resources and write out my 
 
 <img src="src/images/scaffold.jpg"></img>
 
-
+Once all this was done I was ready to start.
 ## Development
 
 After all of the planning, my first step to building the website was to set up the backend. I spent 1 - 2 days setting up the resources, relationships and authentication in the backend. Most of this was achieved using terminal commands and a few amendments to the files using Ruby.  
