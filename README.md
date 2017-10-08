@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This was the final project for the WDI course at General Assembly. It was carried out in the final week of the course. For my final project I wanted to create a website that solidified all the skills I had been working on for the past three months, as well as take advantage of using the relational database skills I had recently acquired when we moved onto learning Ruby on Rails in the last few weeks of the course.
+This was the final project for the WDI course at General Assembly. For my final project I wanted to create a website that solidified all the skills I had been working on for the past three months, as well as take advantage of using the relational database skills I had recently acquired when we moved onto learning Ruby on Rails in the last few weeks of the course.
 
 I decided to make a fitness class scheduling app called Fitness Fun
 
